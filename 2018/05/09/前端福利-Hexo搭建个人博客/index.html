@@ -106,19 +106,20 @@
 
 
 
-  <meta name="description" content="基本语法 (0) 特殊字符之所以把特殊字符放到最前面,就是因为Markdown对特殊字符处理不是很友好,很容易出现很奇怪的异常,其实就是因为文章中包含了特殊字符无法编译通过导致Hexo无法渲染在写博客时,一定注意不要写这些字符,如果要写,就进行转义有些人可能说可以使用反斜杠 \ 来处理,我这里不建议,因为我使用的时候没有解决问题。下面是比较常见的几个: ! &amp;amp;#33; — 惊叹号Excla">
+  <meta name="description" content="简介Markdown 是一种轻量级标记语言，它用简洁的语法代替排版，使我们专心于码字。它的目标是实现易读易写，成为一种适用于网络的书写语言。同时，Markdown支持嵌入html标签。 注意：Markdown使用#、+、*等符号来标记， 符号后面必须跟上 至少1个 空格才有效！ Markdown的常用语法标题Markdown 标题支持两种形式： 1、用#标记 在 标题开头 加上1~6个#，依次代表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MarkDown语法十分钟上手">
 <meta property="og:url" content="http://yoursite.com/2018/05/09/前端福利-Hexo搭建个人博客/index.html">
 <meta property="og:site_name" content="Kenta&#39;s blog">
-<meta property="og:description" content="基本语法 (0) 特殊字符之所以把特殊字符放到最前面,就是因为Markdown对特殊字符处理不是很友好,很容易出现很奇怪的异常,其实就是因为文章中包含了特殊字符无法编译通过导致Hexo无法渲染在写博客时,一定注意不要写这些字符,如果要写,就进行转义有些人可能说可以使用反斜杠 \ 来处理,我这里不建议,因为我使用的时候没有解决问题。下面是比较常见的几个: ! &amp;amp;#33; — 惊叹号Excla">
+<meta property="og:description" content="简介Markdown 是一种轻量级标记语言，它用简洁的语法代替排版，使我们专心于码字。它的目标是实现易读易写，成为一种适用于网络的书写语言。同时，Markdown支持嵌入html标签。 注意：Markdown使用#、+、*等符号来标记， 符号后面必须跟上 至少1个 空格才有效！ Markdown的常用语法标题Markdown 标题支持两种形式： 1、用#标记 在 标题开头 加上1~6个#，依次代表">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2018/05/09/前端福利-Hexo搭建个人博客/span%20class=%22hljs-link_url%22%3Ehttp:%20//图片地址%3C/span">
-<meta property="og:updated_time" content="2018-05-09T04:56:56.981Z">
+<meta property="og:image" content="http://yoursite.com/2018/05/09/前端福利-Hexo搭建个人博客/图片地址">
+<meta property="og:image" content="https://connorlin.github.io/images/avatar.jpg">
+<meta property="og:updated_time" content="2018-05-25T08:28:33.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MarkDown语法十分钟上手">
-<meta name="twitter:description" content="基本语法 (0) 特殊字符之所以把特殊字符放到最前面,就是因为Markdown对特殊字符处理不是很友好,很容易出现很奇怪的异常,其实就是因为文章中包含了特殊字符无法编译通过导致Hexo无法渲染在写博客时,一定注意不要写这些字符,如果要写,就进行转义有些人可能说可以使用反斜杠 \ 来处理,我这里不建议,因为我使用的时候没有解决问题。下面是比较常见的几个: ! &amp;amp;#33; — 惊叹号Excla">
-<meta name="twitter:image" content="http://yoursite.com/2018/05/09/前端福利-Hexo搭建个人博客/span%20class=%22hljs-link_url%22%3Ehttp:%20//图片地址%3C/span">
+<meta name="twitter:description" content="简介Markdown 是一种轻量级标记语言，它用简洁的语法代替排版，使我们专心于码字。它的目标是实现易读易写，成为一种适用于网络的书写语言。同时，Markdown支持嵌入html标签。 注意：Markdown使用#、+、*等符号来标记， 符号后面必须跟上 至少1个 空格才有效！ Markdown的常用语法标题Markdown 标题支持两种形式： 1、用#标记 在 标题开头 加上1~6个#，依次代表">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/09/前端福利-Hexo搭建个人博客/图片地址">
 
 
 
@@ -367,89 +368,159 @@
       
 
       
-        <p></p><h1 id="基本语法">基本语法</h1><p></p>
-<p></p><h2 id="0-特殊字符"><a name="t1"></a>(0) 特殊字符</h2><br>之所以把特殊字符放到最前面,就是因为Markdown对特殊字符处理不是很友好,很容易出现很奇怪的异常,其实就是因为文章中包含了特殊字符无法编译通过导致Hexo无法渲染<br>在写博客时,一定注意不要写这些字符,如果要写,就进行转义<br>有些人可能说可以使用反斜杠 \ 来处理,我这里不建议,因为我使用的时候没有解决问题。<br>下面是比较常见的几个:<p></p>
-<p><pre class="prettyprint"><code class="hljs ruby has-numbering">! &amp;<span class="hljs-comment">#33; — 惊叹号Exclamation mark </span><br>” &amp;<span class="hljs-comment">#34; &amp;quot; 双引号Quotation mark </span><br><span class="hljs-comment"># &amp;#35; — 数字标志Number sign </span><br><span class="hljs-variable">$ </span>&amp;<span class="hljs-comment">#36; — 美元标志Dollar sign </span><br>% &amp;<span class="hljs-comment">#37; — 百分号Percent sign </span><br>&amp; &amp;<span class="hljs-comment">#38; &amp;amp; Ampersand </span><br>‘ &amp;<span class="hljs-comment">#39; — 单引号Apostrophe </span><br>( &amp;<span class="hljs-comment">#40; — 小括号左边部分Left parenthesis </span><br>) &amp;<span class="hljs-comment">#41; — 小括号右边部分Right parenthesis </span></code></pre></p>
+        <p>简介<br>Markdown 是一种轻量级标记语言，它用简洁的语法代替排版，使我们专心于码字。它的目标是实现易读易写，成为一种适用于网络的书写语言。同时，Markdown支持嵌入html标签。</p>
+<p><u>注意：Markdown使用#、+、*等符号来标记， 符号后面必须跟上 至少1个 空格才有效！</u></p>
+<p>Markdown的常用语法<br>标题<br>Markdown 标题支持两种形式：</p>
+<p>1、用#标记</p>
+<p>在 标题开头 加上1~6个#，依次代表一级标题、二级标题….六级标题</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h5 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h5><h6 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h6><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>2、用=和-标记</p>
+<p>在 标题底下 加上任意个=代表一级标题，-代表二级标题</p>
+<h1 id="一级标题-1"><a href="#一级标题-1" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><p>效果如下：</p>
+<p>一级标题<br>二级标题<br>三级标题<br>四级标题<br>五级标题<br>六级标题<br>列表<br>Markdown 支持有序列表和无序列表。</p>
+<p>无序列表使用-、+和*作为列表标记：</p>
 <ul>
-<li>&amp;<span class="hljs-comment">#42; — 星号Asterisk </span></li>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
 </ul>
 <ul>
-<li>&amp;<span class="hljs-comment">#43; — 加号Plus sign </span><br>&lt; &amp;<span class="hljs-comment">#60; &amp;lt; 小于号Less than </span><br>= &amp;<span class="hljs-comment">#61; — 等于符号Equals sign </span><br>&gt; &amp;<span class="hljs-comment">#62; &amp;gt; 大于号Greater than </span><br>? &amp;<span class="hljs-comment">#63; — 问号Question mark </span><br>@ &amp;<span class="hljs-comment">#64; — Commercial at </span><br>[ &amp;<span class="hljs-comment">#91; — 中括号左边部分Left square bracket </span><br>\ &amp;<span class="hljs-comment">#92; — 反斜杠Reverse solidus (backslash) </span><br>] &amp;<span class="hljs-comment">#93; — 中括号右边部分Right square bracket </span><br>{ &amp;<span class="hljs-comment">#123; — 大括号左边部分Left curly brace </span><br>| &amp;<span class="hljs-comment">#124; — 竖线Vertical bar </span><br>} &amp;<span class="hljs-comment">#125; — 大括号右边部分Right curly brace </span><br><strong><em>特别注意的是小括号 ( ) 大括号 { } ,如果不小心写了,你执行hexo s –debug可能报一些莫名其妙的错误!</em></strong><br><a href="http://www.cnblogs.com/xcsn/p/3559624.html" target="_blank" rel="noopener noreferrer">这里还有更多关于特殊字符如何转义的内容</a><br><h2 id="1-标题"><a name="t2"></a>(1) 标题</h2><br>在文字前加上#号<br><pre class="prettyprint"><code class="hljs vala has-numbering"><span class="hljs-preprocessor"># 一级标题</span><br><span class="hljs-preprocessor">## 二级标题</span><br><span class="hljs-preprocessor">### 三级标题</span><br><span class="hljs-preprocessor">#### 四级标题</span><br><span class="hljs-preprocessor">##### 五级标题</span><br><span class="hljs-preprocessor">###### 六级标题</span></code></pre></li>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
 </ul>
-<p>大标题<br>=<br>小标题<br>-<br>预览效果：</p>
-<p></p><h1 id="一级标题"><a name="t3"></a>一级标题</h1><p></p>
-<p></p><h2 id="二级标题"><a name="t4"></a>二级标题</h2><p></p>
-<p></p><h3 id="三级标题"><a name="t5"></a>三级标题</h3><p></p>
-<p></p><h4 id="四级标题">四级标题</h4><p></p>
-<p></p><h5 id="五级标题">五级标题</h5><p></p>
-<p></p><h6 id="六级标题">六级标题</h6><p></p>
-<p></p><h1 id="大标题"><a name="t6"></a>大标题</h1><p></p>
-<p></p><h2 id="小标题"><a name="t7"></a>小标题</h2><p></p>
-<p></p><h2 id="2-粗体斜体"><a name="t8"></a>(2) 粗体斜体</h2><p></p>
-<p><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-emphasis"><em>斜体文本</em></span>    <span class="hljs-emphasis"><em>斜体文本</em></span><br><span class="hljs-strong"><strong>粗体文本</strong></span>    <span class="hljs-strong"><strong>粗体文本</strong></span><br><span class="hljs-strong"><strong>*粗斜体文本</strong></span>*    <span class="hljs-strong"><strong>_粗斜体文本</strong></span>_</code></pre><br>预览效果：<br><em>斜体文本</em> <em>斜体文本</em><br><strong>粗体文本</strong> <strong>粗体文本</strong><br><strong><em>粗斜体文本</em></strong> <strong><em>粗斜体文本</em></strong></p>
-<p></p><h2 id="3-链接"><a name="t9"></a>(3) 链接</h2><p></p>
-<p><pre class="prettyprint"><code class="hljs markdown has-numbering">常用链接方法<br>文字链接 <a href="span class=&quot;hljs-link_url&quot;&gt;https://chwshuang.github.io&lt;/span"><span class="hljs-link_label">链接名称</span></a><br>网址链接 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">https:</span>//<span class="hljs-attribute">chwshuang.github.io</span>&gt;</span></span></code></pre></p>
-<p>高级链接技巧<br>这个链接用 1 作为网址变量 [<span class="hljs-link_label">Google</span>][<span class="hljs-link_reference">1</span>].<br>这个链接用 yahoo 作为网址变量 [<span class="hljs-link_label">Yahoo!</span>][<span class="hljs-link_reference">yahoo</span>].<br>然后在文档的结尾为变量赋值（网址）</p>
-<p>  [yahoo]: <a href="http://www.yahoo.com/" target="_blank" rel="noopener">http://www.yahoo.com/</a><br>预览效果：<br>文字链接 <a href="http://%08hushuang.me/" target="_blank" rel="noopener noreferrer">链接名称</a><br>网址链接 <a href="http://%08hushuang.me/" target="_blank" rel="noopener noreferrer">http://hushuang.me</a></p>
-<p>高级链接技巧<br>这个链接用 1 作为网址变量 <a href="http://www.google.com/" target="_blank" rel="noopener noreferrer">Google</a>.<br>这个链接用 yahoo 作为网址变量 <a href="http://www.yahoo.com/" target="_blank" rel="noopener noreferrer">Yahoo!</a>.</p>
-<p></p><h2 id="4-列表"><a name="t10"></a>(4) 列表</h2><br>普通无序列表<p></p>
-<p><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-bullet">- </span>列表文本前使用 [减号+空格]<br><span class="hljs-bullet">+ </span>列表文本前使用 [加号+空格]<br><span class="hljs-bullet">* </span>列表文本前使用 [星号+空格]</code></pre><br>普通有序列表</p>
-<p><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-bullet">1. </span>列表前使用 [数字+空格]<br><span class="hljs-bullet">2. </span>我们会自动帮你添加数字<br><span class="hljs-bullet">7. </span>不用担心数字不对，显示的时候我们会自动把这行的 7 纠正为 3</code></pre><br>列表嵌套</p>
-<p><pre class="prettyprint"><code class="hljs haml has-numbering">1. 列出所有元素：<br>    -<span class="ruby"> 无序列表元素 <span class="hljs-constant">A</span><br></span>        1. 元素 A 的有序子列表<br>    -<span class="ruby"> 前面加四个空格<br></span>2. 列表里的多段换行：<br>    前面必须加四个空格，<br>    这样换行，整体的格式不会乱</code></pre></p>
-<ol start="3">
-<li><p>列表里引用：</p>
-<p> &gt; 前面空一行<br> &gt; 仍然需要在 &gt;  前面加四个空格<br></p><h2 id="5-引用"><a name="t11"></a>(5) 引用</h2><br>普通引用<br><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-blockquote">&gt; 引用文本前使用 [大于号+空格]</span><br><span class="hljs-blockquote">&gt; 折行可以不加，新起一行都要加上哦</span></code></pre><br>引用里嵌套引用<br><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-blockquote">&gt; 最外层引用</span><br><span class="hljs-blockquote">&gt; &gt; 多一个 &gt; 嵌套一层引用</span><br><span class="hljs-blockquote">&gt; &gt; &gt; 可以嵌套很多层</span></code></pre><br>引用里嵌套列表<br><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-blockquote">&gt; - 这是引用里嵌套的一个列表</span><br><span class="hljs-blockquote">&gt; - 还可以有子列表</span><br><span class="hljs-blockquote">&gt;     * 子列表需要从 - 之后延后四个空格开始</span></code></pre><br><h2 id="6-图片"><a name="t12"></a>(6) 图片</h2><br>跟链接的方法区别在于前面加了个感叹号!，这样是不是觉得好记多了呢?<br><pre class="prettyprint"><code class="hljs markdown has-numbering"><img src="span class=&quot;hljs-link_url&quot;&gt;http: //图片地址&lt;/span" alt="&lt;span class=&quot;hljs-link_label&quot;&gt;图片名称&lt;/span&gt;"><br>当然，你也可以像网址那样对图片网址使用变量<p></p>
-</code></pre></li>
+<ul>
+<li>Red</li>
+<li>Green</li>
+<li>Blue<br>效果如下：</li>
+</ul>
+<p>Red<br>Green<br>Blue<br>有序列表则使用数字加英文句点.来表示：</p>
+<ol>
+<li>Red</li>
+<li>Green</li>
+<li>Blue<br>效果如下：</li>
 </ol>
-<p>这个链接用 1 作为网址变量 [ Google] [ 1].<br>然后在文档的结尾位变量赋值(网址)</p>
-<p>[<span class="hljs-link_reference">1</span>]:<span class="hljs-link_url"> http: //<a href="http://www.google.com/logo.png" target="_blank" rel="noopener">www.google.com/logo.png</a></span><span class="hljs-link_url"><br>也可以使用 HTML 的图片语法来自定义图片的宽高大小</span><br>&lt;img src=”<a href="http://blog.fishnet.tech/wp-content/uploads/2017/11/未标题-1-300x205.jpg" target="_blank" rel="noopener">img/gxt.png</a>” width=”240” height=”275”&gt;</p>
-<p><img style="box-sizing: border-box; border: 0px; vertical-align: middle; outline: none; margin-top: 15px; margin-bottom: 15px; max-width: 100%;" title="" alt="&lt;img src=&quot;img/gxt.jpg&quot; width=&quot;240&quot; height=&quot;275&quot;&gt;"></p>
-<p></p><h2 id="7-换行"><a name="t13"></a>(7) 换行</h2><br>如果另起一行，只需在当前行结尾加 2 个空格<p></p>
-<p><pre class="prettyprint"><code class="hljs has-numbering">在当前行的结尾加 2 个空格<br>这行就会新起一行<br>如果是要起一个新段落，只需要空出一行即可。</code></pre></p>
-<p></p><h2 id="8-分隔符"><a name="t14"></a>(8) 分隔符</h2><br>如果你有写分割线的习惯，可以新起一行输入三个减号-。当前后都有段落时，请空出一行：<p></p>
-<p><pre class="prettyprint"><code class="hljs haml has-numbering">前面的段落</code></pre></p>
-<p>-<span class="ruby">–<br></span><br>后面的段落</p>
-<p></p><h2 id="9-小型文本"><a name="t15"></a>(9) 小型文本</h2><br>Markdown语法：<p></p>
-<p><pre class="prettyprint"><code class="hljs xml has-numbering"><span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>文本内容<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span></code></pre><br>预览效果：<br>我是正常文字<br><small>我是小型文字</small></p>
-<p></p><h2 id="10-注释"><a name="t16"></a>(10) 注释</h2><br>用html的注释，好像只有这样？<p></p>
-<p><pre class="prettyprint"><code class="hljs xml has-numbering"><span class="hljs-comment">&lt;!– 注释 –&gt;</span></code></pre></p>
-<p></p><h2 id="11-表格"><a name="t17"></a>(11) 表格</h2><br>Markdown的扩展语法，hexo已经支持<p></p>
-<p><pre class="prettyprint"><code class="hljs ruby has-numbering">| 参数           | 说明                 |   默认值            |<br>| ————- |<span class="hljs-symbol">:——————-</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:——————</span><span class="hljs-symbol">:|</span><br>| host          | 远程主机的地址         |                    |<br>| user          | 使用者名称            |                    |<br>| root          |  远程主机的根目录      |                    |<br>| port          | 端口                 |       <span class="hljs-number">22</span>           |<br>| delete        | 删除远程主机上的旧文件   |  <span class="hljs-keyword">true</span>              |<br>| verbose       | 显示调试信息           |   <span class="hljs-keyword">true</span>             |<br>| ignore_errors | 忽略错误              |     <span class="hljs-keyword">false</span>          |</code></pre></p>
-<p><table></table></p>
-<p><thead></thead></p>
-<p><tr></tr></p>
-<p><th>参数</th></p>
-<p><th align="center">说明</th></p>
-<p><th align="center">默认值</th><br><br></p>
-<p><tbody></tbody></p>
-<p><tr></tr></p>
-<p><td>host</td></p>
-<p><td align="center">远程主机的地址</td></p>
-<p><td align="center"></td><br></p>
-<p><tr></tr></p>
-<p><td>user</td></p>
-<p><td align="center">使用者名称</td></p>
-<p><td align="center"></td><br></p>
-<p><tr></tr></p>
-<p><td>root</td></p>
-<p><td align="center">远程主机的根目录</td></p>
-<p><td align="center"></td><br></p>
-<p><tr></tr></p>
-<p><td>port</td></p>
-<p><td align="center">端口</td></p>
-<p><td align="center">22</td><br></p>
-<p><tr></tr></p>
-<p><td>delete</td></p>
-<p><td align="center">删除远程主机上的旧文件</td></p>
-<p><td align="center">true</td><br></p>
-<p><tr></tr></p>
-<p><td>verbose</td></p>
-<p><td align="center">显示调试信息</td></p>
-<p><td align="center">true</td><br></p>
-<p><tr></tr></p>
-<p><td>ignore_errors</td></p>
-<p><td align="center">忽略错误</td></p>
-<p><td align="center">false</td><br><br><br><br>最后:<br>还是要注意特殊字符的处理,其他的就是排版样式的问题,特殊字符没处理好,就是Hexo渲染报错</p>
+<p>Red<br>Green<br>Blue<br>引用<br>引用以&gt;来表示，引用中支持多级引用、标题、列表、代码块、分割线等常规语法。</p>
+<p>常见的引用写法：</p>
+<blockquote>
+<p>这是一段引用    //在<code>&gt;</code>后面有 1 个空格</p>
+<pre><code>这是引用的代码块形式    //在`&gt;`后面有 5 个空格
+</code></pre><p>代码例子：</p>
+<pre><code>protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+}
+</code></pre></blockquote>
+<blockquote>
+<p>一级引用</p>
+<blockquote>
+<p>二级引用</p>
+<blockquote>
+<p>三级引用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<h4 id="这是一个四级标题"><a href="#这是一个四级标题" class="headerlink" title="这是一个四级标题"></a>这是一个四级标题</h4><ol>
+<li>这是第一行列表项</li>
+<li>这是第二行列表项<br>效果如下：</li>
+</ol>
+</blockquote>
+<p>这是一段引用</p>
+<p>这是引用的代码块形式    //在<code>&gt;</code>后面有 5 个空格<br>代码例子：</p>
+<p>protected void onCreate(Bundle savedInstanceState) {<br>    super.onCreate(savedInstanceState);<br>    setContentView(R.layout.activity_main);<br>}<br>一级引用</p>
+<p>二级引用</p>
+<p>三级引用</p>
+<p>这是一个四级标题<br>这是第一行列表项<br>这是第二行列表项<br>以下是分割线</p>
+<p>强调<br>两个<em>或-代表加粗，一个</em>或-代表斜体，~~代表删除。</p>
+<p><strong>加粗文本</strong> 或者 <strong>加粗文本</strong></p>
+<p><em>斜体文本</em>  或者<em>斜体文本</em></p>
+<p><del>删除文本</del><br>效果如下：</p>
+<p>加粗文本 或者 加粗文本</p>
+<p>斜体文本 或者 斜体文本</p>
+<p>删除文本</p>
+<p>图片与链接<br>图片与链接的语法很像，区别在一个 ! 号。二者格式：</p>
+<p>图片：<img src="" alt="">    <img src="图片地址" alt="图片文本(可忽略)"></p>
+<p>链接：<a href=""></a>     <a href="链接地址">链接文本</a><br>链接又分为行内式、参考式和 自动链接：</p>
+<p>这是行内式链接：<a href="http://connorlin.github.io" target="_blank" rel="noopener">ConnorLin’s Blog</a>。</p>
+<p>这是参考式链接：<a href="http://connorlin.github.io/" title="ConnorLin&#39;s Blog" target="_blank" rel="noopener">ConnorLin’s Blog</a>，其中url为链接标记，可置于文中任意位置。</p>
+<p>链接标记格式为：[链接标记文本]:  链接地址  链接title(可忽略)</p>
+<p>这是自动链接：直接使用<code>&lt;&gt;</code>括起来<a href="http://connorlin.github.io" target="_blank" rel="noopener">http://connorlin.github.io</a></p>
+<p>这是图片：<img src="https://connorlin.github.io/images/avatar.jpg" alt=""></p>
+<p>效果如下：</p>
+<p>这是行内式链接：ConnorLin’s Blog。</p>
+<p>这是参考式链接：ConnorLin’s Blog，其中url为链接标记，可置于文中任意位置。</p>
+<p>这是自动链接：直接使用&lt;&gt;括起来<a href="http://connorlin.github.io" target="_blank" rel="noopener">http://connorlin.github.io</a></p>
+<p>这是图片：</p>
+<p>代码<br>代码分为行内代码和代码块。</p>
+<p>行内代码使用 <code>代码</code> 标识，可嵌入文字中</p>
+<p>代码块使用4个空格或<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>这里是代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">代码语法高亮在 ```后面加上空格和语言名称即可</span><br><span class="line"></span><br><span class="line">``` 语言</span><br><span class="line">//注意语言前面有空格</span><br><span class="line">这里是代码</span><br></pre></td></tr></table></figure></p>
+<p>例如：</p>
+<p>这是行内代码<code>onCreate(Bundle savedInstanceState)</code>的例子。</p>
+<p>这是代码块和语法高亮：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注意java前面有空格</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    setContentView(R.layout.activity_main);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p>这是行内代码onCreate(Bundle savedInstanceState)的例子。</p>
+<p>这是代码块和语法高亮：</p>
+<p>// 注意java前面有空格<br>protected void onCreate(Bundle savedInstanceState) {<br>    super.onCreate(savedInstanceState);<br>    setContentView(R.layout.activity_main);<br>}<br>表格<br>表格对齐格式</p>
+<p>居左：:—-<br>居中：:—-:或—–<br>居右：—-:<br>例子：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">标题</th>
+<th style="text-align:center">标题</th>
+<th style="text-align:right">标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">居左测试文本</td>
+<td style="text-align:center">居中测试文本</td>
+<td style="text-align:right">居右测试文本</td>
+</tr>
+<tr>
+<td style="text-align:left">居左测试文本1</td>
+<td style="text-align:center">居中测试文本2</td>
+<td style="text-align:right">居右测试文本3</td>
+</tr>
+<tr>
+<td style="text-align:left">居左测试文本11</td>
+<td style="text-align:center">居中测试文本22</td>
+<td style="text-align:right">居右测试文本33</td>
+</tr>
+<tr>
+<td style="text-align:left">居左测试文本111</td>
+<td style="text-align:center">居中测试文本222</td>
+<td style="text-align:right">居右测试文本333</td>
+</tr>
+</tbody>
+</table>
+<p>效果如下：</p>
+<p>标题    标题    标题<br>居左测试文本    居中测试文本    居右测试文本<br>居左测试文本1    居中测试文本2    居右测试文本3<br>居左测试文本11    居中测试文本22    居右测试文本33<br>居左测试文本111    居中测试文本222    居右测试文本333<br>分隔线<br>在一行中用三个以上的*、-、_来建立一个分隔线，行内不能有其他东西。也可以在符号间插入空格。</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>效果均为一条分割线：</p>
+<p>换行<br>在行尾添加两个空格加回车表示换行：</p>
+<p>这是一行后面加两个空格  换行<br>效果如下：</p>
+<p>这是一行后面加两个空格<br>换行</p>
+<p>脚注(注解)<br>使用[^]来定义脚注：</p>
+<p>这是一个脚注的例子<a href="这里是脚注">^1</a></p>
+<p>效果如下：</p>
+<p>这是一个脚注的例子[1]</p>
+<p>常用弥补Markdown的Html标签<br>字体</p>
+<font face="微软雅黑" color="red" size="6">字体及字体颜色和大小</font><br><font color="#0000ff">字体颜色</font><br>效果如下：<br><br><font face="微软雅黑" color="red" size="6">字体及字体颜色和大小</font><br><font color="#0000ff">字体颜色</font>
+
+<p>换行<br>使用html标签<code>&lt;br/&gt;</code><br>换行<br>效果如下：</p>
+<p>使用html标签<br><br>换行</p>
+<p>文本对齐方式</p>
+<p align="left">居左文本</p><br><p align="center">居中文本</p><br><p align="right">居右文本</p><br>效果如下：<br><br><p align="left">居左文本</p><br><p align="center">居中文本</p><br><p align="right">居右文本</p>
+
+<p>下划线<br><u>下划线文本</u><br>效果如下：</p>
+<p><u>下划线文本</u></p>
+<p>That’s all, Enjoy it!</p>
+<p>作者：ConnorLin<br>链接：<a href="https://www.jianshu.com/p/82e730892d42" target="_blank" rel="noopener">https://www.jianshu.com/p/82e730892d42</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
       
     </div>
@@ -515,6 +586,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/25/lazyLoad图片懒加载/" rel="prev" title="lazyLoad图片懒加载">
+                lazyLoad图片懒加载 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -597,7 +672,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -644,7 +719,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本语法"><span class="nav-number">1.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-特殊字符"><span class="nav-number">1.1.</span> <span class="nav-text">(0) 特殊字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-标题"><span class="nav-number">1.2.</span> <span class="nav-text">(1) 标题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#四级标题"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#五级标题"><span class="nav-number">2.1.1.1.1.</span> <span class="nav-text">五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#六级标题"><span class="nav-number">2.1.1.1.1.1.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#大标题"><span class="nav-number">3.</span> <span class="nav-text">大标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#小标题"><span class="nav-number">3.1.</span> <span class="nav-text">小标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-粗体斜体"><span class="nav-number">3.2.</span> <span class="nav-text">(2) 粗体斜体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-链接"><span class="nav-number">3.3.</span> <span class="nav-text">(3) 链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-列表"><span class="nav-number">3.4.</span> <span class="nav-text">(4) 列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-引用"><span class="nav-number">3.5.</span> <span class="nav-text">(5) 引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-图片"><span class="nav-number">3.6.</span> <span class="nav-text">(6) 图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-换行"><span class="nav-number">3.7.</span> <span class="nav-text">(7) 换行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-分隔符"><span class="nav-number">3.8.</span> <span class="nav-text">(8) 分隔符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-小型文本"><span class="nav-number">3.9.</span> <span class="nav-text">(9) 小型文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-注释"><span class="nav-number">3.10.</span> <span class="nav-text">(10) 注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-表格"><span class="nav-number">3.11.</span> <span class="nav-text">(11) 表格</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">1.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">1.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">1.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#四级标题"><span class="nav-number">1.1.1.0.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#五级标题"><span class="nav-number">1.1.1.0.1.1.</span> <span class="nav-text">五级标题</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#六级标题"><span class="nav-number">1.1.1.0.1.2.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题-1"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题-1"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#这是一个四级标题"><span class="nav-number">2.1.0.1.</span> <span class="nav-text">这是一个四级标题</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

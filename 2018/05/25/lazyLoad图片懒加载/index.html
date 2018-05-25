@@ -106,17 +106,17 @@
 
 
 
-  <meta name="description" content="$(&quot;#&quot;).css(&quot;backgroundImage&quot;).replace(&apos;url(&apos;,&apos;&apos;).replace(&apos;)&apos;,&apos;&apos;);">
+  <meta name="description" content="图片延迟加载lazyload,使用延迟加载在可提高网页下载速度。在大多数情况下，它也能帮助减轻服务器负载。  html:1&amp;lt;img class=&amp;quot;datu lazy&amp;quot; src=&amp;quot;./images/default.png&amp;quot; data-src=&amp;quot;./images/img/1.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt; css:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jquery 获取元素背景图片backgroungImage的url">
-<meta property="og:url" content="http://yoursite.com/2018/05/09/jquery-获取元素背景图片backgroungImage的url/index.html">
+<meta property="og:title" content="lazyLoad图片懒加载">
+<meta property="og:url" content="http://yoursite.com/2018/05/25/lazyLoad图片懒加载/index.html">
 <meta property="og:site_name" content="Kenta&#39;s blog">
-<meta property="og:description" content="$(&quot;#&quot;).css(&quot;backgroundImage&quot;).replace(&apos;url(&apos;,&apos;&apos;).replace(&apos;)&apos;,&apos;&apos;);">
+<meta property="og:description" content="图片延迟加载lazyload,使用延迟加载在可提高网页下载速度。在大多数情况下，它也能帮助减轻服务器负载。  html:1&amp;lt;img class=&amp;quot;datu lazy&amp;quot; src=&amp;quot;./images/default.png&amp;quot; data-src=&amp;quot;./images/img/1.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt; css:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-09T04:39:27.032Z">
+<meta property="og:updated_time" content="2018-05-25T08:34:09.601Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jquery 获取元素背景图片backgroungImage的url">
-<meta name="twitter:description" content="$(&quot;#&quot;).css(&quot;backgroundImage&quot;).replace(&apos;url(&apos;,&apos;&apos;).replace(&apos;)&apos;,&apos;&apos;);">
+<meta name="twitter:title" content="lazyLoad图片懒加载">
+<meta name="twitter:description" content="图片延迟加载lazyload,使用延迟加载在可提高网页下载速度。在大多数情况下，它也能帮助减轻服务器负载。  html:1&amp;lt;img class=&amp;quot;datu lazy&amp;quot; src=&amp;quot;./images/default.png&amp;quot; data-src=&amp;quot;./images/img/1.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt; css:">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/09/jquery-获取元素背景图片backgroungImage的url/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/25/lazyLoad图片懒加载/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>jquery 获取元素背景图片backgroungImage的url | Kenta's blog</title>
+  <title>lazyLoad图片懒加载 | Kenta's blog</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/09/jquery-获取元素背景图片backgroungImage的url/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/lazyLoad图片懒加载/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kenta">
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">jquery 获取元素背景图片backgroungImage的url</h1>
+          <h1 class="post-title" itemprop="name headline">lazyLoad图片懒加载</h1>
         
 
         <div class="post-meta">
@@ -328,7 +328,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-09T12:37:46+08:00">2018-05-09</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-25T16:24:26+08:00">2018-05-25</time>
             
 
             
@@ -365,8 +365,14 @@
       
 
       
-        <pre class="prettyprint">
-$("#").css("backgroundImage").replace('url(','').replace(')','');</pre>
+        <blockquote>
+<p>图片延迟加载lazyload,使用延迟加载在可提高网页下载速度。在大多数情况下，它也能帮助减轻服务器负载。</p>
+</blockquote>
+<p>html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img class=&quot;datu lazy&quot; src=&quot;./images/default.png&quot; data-src=&quot;./images/img/1.jpg&quot; alt=&quot;&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>css:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.lazy &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    min-height: 100px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>custom.js:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var stuff = $(&apos;.lazy&apos;);</span><br><span class="line">var quantity = stuff.length;</span><br><span class="line">var n = 0; //存储图片加载到的位置，避免每次都从第一张图片开始遍历</span><br><span class="line">var placeholder = &apos;./images/default.png&apos;;</span><br><span class="line">var clientHeight = window.innerHeight || document.documentElement.clientHeight; //可见区域高度</span><br><span class="line">function lazyload() &#123;</span><br><span class="line">    for (var i = n; i &lt; quantity; i++) &#123;</span><br><span class="line">        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //滚动条距离顶部高度</span><br><span class="line">        if (stuff[i].offsetTop &lt; clientHeight + scrollTop) &#123;</span><br><span class="line">            if (stuff[i].getAttribute(&apos;src&apos;) == placeholder)</span><br><span class="line"></span><br><span class="line">                stuff[i].setAttribute(&apos;src&apos;, stuff[i].getAttribute(&apos;data-src&apos;));</span><br><span class="line">            n++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">lazyload();</span><br><span class="line">window.onscroll = lazyload;</span><br></pre></td></tr></table></figure></p>
+<p>lazyload.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var stuff = $(&apos;.lazy&apos;);</span><br><span class="line">var quantity = stuff.length;</span><br><span class="line">var n = 0; //存储图片加载到的位置，避免每次都从第一张图片开始遍历</span><br><span class="line">var placeholder = &apos;./images/default.png&apos;;</span><br><span class="line">var clientHeight = window.innerHeight || document.documentElement.clientHeight; //可见区域高度</span><br><span class="line">function lazyload() &#123;</span><br><span class="line">    for (var i = n; i &lt; quantity; i++) &#123;</span><br><span class="line">        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //滚动条距离顶部高度</span><br><span class="line">        if (stuff[i].offsetTop &lt; clientHeight + scrollTop) &#123;</span><br><span class="line">            if (stuff[i].getAttribute(&apos;src&apos;) == placeholder)</span><br><span class="line"></span><br><span class="line">                stuff[i].setAttribute(&apos;src&apos;, stuff[i].getAttribute(&apos;data-src&apos;));</span><br><span class="line">            n++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">lazyload();</span><br><span class="line">window.onscroll = lazyload;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -422,8 +428,8 @@ $("#").css("backgroundImage").replace('url(','').replace(')','');</pre>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/09/微信小程序/" rel="next" title="[微信小程序]">
-                <i class="fa fa-chevron-left"></i> [微信小程序]
+              <a href="/2018/05/09/前端福利-Hexo搭建个人博客/" rel="next" title="MarkDown语法十分钟上手">
+                <i class="fa fa-chevron-left"></i> MarkDown语法十分钟上手
               </a>
             
           </div>
@@ -432,8 +438,8 @@ $("#").css("backgroundImage").replace('url(','').replace(')','');</pre>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/09/H5中插入音乐，点击控制播放/" rel="prev" title="H5中插入音乐，点击控制播放">
-                H5中插入音乐，点击控制播放 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/25/微信小程序-图片上传压缩尺寸，canvas方法/" rel="prev" title="[微信小程序]图片上传压缩尺寸，canvas方法">
+                [微信小程序]图片上传压缩尺寸，canvas方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
