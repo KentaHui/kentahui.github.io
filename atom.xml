@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-26T04:52:08.365Z</updated>
+  <updated>2018-05-09T04:56:56.981Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,207 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MarkDown语法十分钟上手</title>
+    <link href="http://yoursite.com/2018/05/09/%E5%89%8D%E7%AB%AF%E7%A6%8F%E5%88%A9-Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2018/05/09/前端福利-Hexo搭建个人博客/</id>
+    <published>2018-05-09T04:55:00.000Z</published>
+    <updated>2018-05-09T04:56:56.981Z</updated>
+    
+    <content type="html"><![CDATA[<p></p><h1 id="基本语法">基本语法</h1><p></p><p></p><h2 id="0-特殊字符"><a name="t1"></a>(0) 特殊字符</h2><br>之所以把特殊字符放到最前面,就是因为Markdown对特殊字符处理不是很友好,很容易出现很奇怪的异常,其实就是因为文章中包含了特殊字符无法编译通过导致Hexo无法渲染<br>在写博客时,一定注意不要写这些字符,如果要写,就进行转义<br>有些人可能说可以使用反斜杠 \ 来处理,我这里不建议,因为我使用的时候没有解决问题。<br>下面是比较常见的几个:<p></p><p><pre class="prettyprint"><code class="hljs ruby has-numbering">! &amp;<span class="hljs-comment">#33; — 惊叹号Exclamation mark </span><br>” &amp;<span class="hljs-comment">#34; &amp;quot; 双引号Quotation mark </span><br><span class="hljs-comment"># &amp;#35; — 数字标志Number sign </span><br><span class="hljs-variable">$ </span>&amp;<span class="hljs-comment">#36; — 美元标志Dollar sign </span><br>% &amp;<span class="hljs-comment">#37; — 百分号Percent sign </span><br>&amp; &amp;<span class="hljs-comment">#38; &amp;amp; Ampersand </span><br>‘ &amp;<span class="hljs-comment">#39; — 单引号Apostrophe </span><br>( &amp;<span class="hljs-comment">#40; — 小括号左边部分Left parenthesis </span><br>) &amp;<span class="hljs-comment">#41; — 小括号右边部分Right parenthesis </span></code></pre></p><ul><li>&amp;<span class="hljs-comment">#42; — 星号Asterisk </span></li></ul><ul><li>&amp;<span class="hljs-comment">#43; — 加号Plus sign </span><br>&lt; &amp;<span class="hljs-comment">#60; &amp;lt; 小于号Less than </span><br>= &amp;<span class="hljs-comment">#61; — 等于符号Equals sign </span><br>&gt; &amp;<span class="hljs-comment">#62; &amp;gt; 大于号Greater than </span><br>? &amp;<span class="hljs-comment">#63; — 问号Question mark </span><br>@ &amp;<span class="hljs-comment">#64; — Commercial at </span><br>[ &amp;<span class="hljs-comment">#91; — 中括号左边部分Left square bracket </span><br>\ &amp;<span class="hljs-comment">#92; — 反斜杠Reverse solidus (backslash) </span><br>] &amp;<span class="hljs-comment">#93; — 中括号右边部分Right square bracket </span><br>{ &amp;<span class="hljs-comment">#123; — 大括号左边部分Left curly brace </span><br>| &amp;<span class="hljs-comment">#124; — 竖线Vertical bar </span><br>} &amp;<span class="hljs-comment">#125; — 大括号右边部分Right curly brace </span><br><strong><em>特别注意的是小括号 ( ) 大括号 { } ,如果不小心写了,你执行hexo s –debug可能报一些莫名其妙的错误!</em></strong><br><a href="http://www.cnblogs.com/xcsn/p/3559624.html" target="_blank" rel="noopener noreferrer">这里还有更多关于特殊字符如何转义的内容</a><br><h2 id="1-标题"><a name="t2"></a>(1) 标题</h2><br>在文字前加上#号<br><pre class="prettyprint"><code class="hljs vala has-numbering"><span class="hljs-preprocessor"># 一级标题</span><br><span class="hljs-preprocessor">## 二级标题</span><br><span class="hljs-preprocessor">### 三级标题</span><br><span class="hljs-preprocessor">#### 四级标题</span><br><span class="hljs-preprocessor">##### 五级标题</span><br><span class="hljs-preprocessor">###### 六级标题</span></code></pre></li></ul><p>大标题<br>=<br>小标题<br>-<br>预览效果：</p><p></p><h1 id="一级标题"><a name="t3"></a>一级标题</h1><p></p><p></p><h2 id="二级标题"><a name="t4"></a>二级标题</h2><p></p><p></p><h3 id="三级标题"><a name="t5"></a>三级标题</h3><p></p><p></p><h4 id="四级标题">四级标题</h4><p></p><p></p><h5 id="五级标题">五级标题</h5><p></p><p></p><h6 id="六级标题">六级标题</h6><p></p><p></p><h1 id="大标题"><a name="t6"></a>大标题</h1><p></p><p></p><h2 id="小标题"><a name="t7"></a>小标题</h2><p></p><p></p><h2 id="2-粗体斜体"><a name="t8"></a>(2) 粗体斜体</h2><p></p><p><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-emphasis"><em>斜体文本</em></span>    <span class="hljs-emphasis"><em>斜体文本</em></span><br><span class="hljs-strong"><strong>粗体文本</strong></span>    <span class="hljs-strong"><strong>粗体文本</strong></span><br><span class="hljs-strong"><strong>*粗斜体文本</strong></span>*    <span class="hljs-strong"><strong>_粗斜体文本</strong></span>_</code></pre><br>预览效果：<br><em>斜体文本</em> <em>斜体文本</em><br><strong>粗体文本</strong> <strong>粗体文本</strong><br><strong><em>粗斜体文本</em></strong> <strong><em>粗斜体文本</em></strong></p><p></p><h2 id="3-链接"><a name="t9"></a>(3) 链接</h2><p></p><p><pre class="prettyprint"><code class="hljs markdown has-numbering">常用链接方法<br>文字链接 <a href="span class=&quot;hljs-link_url&quot;&gt;https://chwshuang.github.io&lt;/span"><span class="hljs-link_label">链接名称</span></a><br>网址链接 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">https:</span>//<span class="hljs-attribute">chwshuang.github.io</span>&gt;</span></span></code></pre></p><p>高级链接技巧<br>这个链接用 1 作为网址变量 [<span class="hljs-link_label">Google</span>][<span class="hljs-link_reference">1</span>].<br>这个链接用 yahoo 作为网址变量 [<span class="hljs-link_label">Yahoo!</span>][<span class="hljs-link_reference">yahoo</span>].<br>然后在文档的结尾为变量赋值（网址）</p><p>  [yahoo]: <a href="http://www.yahoo.com/" target="_blank" rel="noopener">http://www.yahoo.com/</a><br>预览效果：<br>文字链接 <a href="http://%08hushuang.me/" target="_blank" rel="noopener noreferrer">链接名称</a><br>网址链接 <a href="http://%08hushuang.me/" target="_blank" rel="noopener noreferrer">http://hushuang.me</a></p><p>高级链接技巧<br>这个链接用 1 作为网址变量 <a href="http://www.google.com/" target="_blank" rel="noopener noreferrer">Google</a>.<br>这个链接用 yahoo 作为网址变量 <a href="http://www.yahoo.com/" target="_blank" rel="noopener noreferrer">Yahoo!</a>.</p><p></p><h2 id="4-列表"><a name="t10"></a>(4) 列表</h2><br>普通无序列表<p></p><p><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-bullet">- </span>列表文本前使用 [减号+空格]<br><span class="hljs-bullet">+ </span>列表文本前使用 [加号+空格]<br><span class="hljs-bullet">* </span>列表文本前使用 [星号+空格]</code></pre><br>普通有序列表</p><p><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-bullet">1. </span>列表前使用 [数字+空格]<br><span class="hljs-bullet">2. </span>我们会自动帮你添加数字<br><span class="hljs-bullet">7. </span>不用担心数字不对，显示的时候我们会自动把这行的 7 纠正为 3</code></pre><br>列表嵌套</p><p><pre class="prettyprint"><code class="hljs haml has-numbering">1. 列出所有元素：<br>    -<span class="ruby"> 无序列表元素 <span class="hljs-constant">A</span><br></span>        1. 元素 A 的有序子列表<br>    -<span class="ruby"> 前面加四个空格<br></span>2. 列表里的多段换行：<br>    前面必须加四个空格，<br>    这样换行，整体的格式不会乱</code></pre></p><ol start="3"><li><p>列表里引用：</p><p> &gt; 前面空一行<br> &gt; 仍然需要在 &gt;  前面加四个空格<br></p><h2 id="5-引用"><a name="t11"></a>(5) 引用</h2><br>普通引用<br><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-blockquote">&gt; 引用文本前使用 [大于号+空格]</span><br><span class="hljs-blockquote">&gt; 折行可以不加，新起一行都要加上哦</span></code></pre><br>引用里嵌套引用<br><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-blockquote">&gt; 最外层引用</span><br><span class="hljs-blockquote">&gt; &gt; 多一个 &gt; 嵌套一层引用</span><br><span class="hljs-blockquote">&gt; &gt; &gt; 可以嵌套很多层</span></code></pre><br>引用里嵌套列表<br><pre class="prettyprint"><code class="hljs markdown has-numbering"><span class="hljs-blockquote">&gt; - 这是引用里嵌套的一个列表</span><br><span class="hljs-blockquote">&gt; - 还可以有子列表</span><br><span class="hljs-blockquote">&gt;     * 子列表需要从 - 之后延后四个空格开始</span></code></pre><br><h2 id="6-图片"><a name="t12"></a>(6) 图片</h2><br>跟链接的方法区别在于前面加了个感叹号!，这样是不是觉得好记多了呢?<br><pre class="prettyprint"><code class="hljs markdown has-numbering"><img src="span class=&quot;hljs-link_url&quot;&gt;http: //图片地址&lt;/span" alt="&lt;span class=&quot;hljs-link_label&quot;&gt;图片名称&lt;/span&gt;"><br>当然，你也可以像网址那样对图片网址使用变量<p></p></code></pre></li></ol><p>这个链接用 1 作为网址变量 [ Google] [ 1].<br>然后在文档的结尾位变量赋值(网址)</p><p>[<span class="hljs-link_reference">1</span>]:<span class="hljs-link_url"> http: //<a href="http://www.google.com/logo.png" target="_blank" rel="noopener">www.google.com/logo.png</a></span><span class="hljs-link_url"><br>也可以使用 HTML 的图片语法来自定义图片的宽高大小</span><br>&lt;img src=”<a href="http://blog.fishnet.tech/wp-content/uploads/2017/11/未标题-1-300x205.jpg" target="_blank" rel="noopener">img/gxt.png</a>” width=”240” height=”275”&gt;</p><p><img style="box-sizing: border-box; border: 0px; vertical-align: middle; outline: none; margin-top: 15px; margin-bottom: 15px; max-width: 100%;" title="" alt="&lt;img src=&quot;img/gxt.jpg&quot; width=&quot;240&quot; height=&quot;275&quot;&gt;"></p><p></p><h2 id="7-换行"><a name="t13"></a>(7) 换行</h2><br>如果另起一行，只需在当前行结尾加 2 个空格<p></p><p><pre class="prettyprint"><code class="hljs has-numbering">在当前行的结尾加 2 个空格<br>这行就会新起一行<br>如果是要起一个新段落，只需要空出一行即可。</code></pre></p><p></p><h2 id="8-分隔符"><a name="t14"></a>(8) 分隔符</h2><br>如果你有写分割线的习惯，可以新起一行输入三个减号-。当前后都有段落时，请空出一行：<p></p><p><pre class="prettyprint"><code class="hljs haml has-numbering">前面的段落</code></pre></p><p>-<span class="ruby">–<br></span><br>后面的段落</p><p></p><h2 id="9-小型文本"><a name="t15"></a>(9) 小型文本</h2><br>Markdown语法：<p></p><p><pre class="prettyprint"><code class="hljs xml has-numbering"><span class="hljs-tag">&lt;<span class="hljs-title">small</span>&gt;</span>文本内容<span class="hljs-tag">&lt;/<span class="hljs-title">small</span>&gt;</span></code></pre><br>预览效果：<br>我是正常文字<br><small>我是小型文字</small></p><p></p><h2 id="10-注释"><a name="t16"></a>(10) 注释</h2><br>用html的注释，好像只有这样？<p></p><p><pre class="prettyprint"><code class="hljs xml has-numbering"><span class="hljs-comment">&lt;!– 注释 –&gt;</span></code></pre></p><p></p><h2 id="11-表格"><a name="t17"></a>(11) 表格</h2><br>Markdown的扩展语法，hexo已经支持<p></p><p><pre class="prettyprint"><code class="hljs ruby has-numbering">| 参数           | 说明                 |   默认值            |<br>| ————- |<span class="hljs-symbol">:——————-</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:——————</span><span class="hljs-symbol">:|</span><br>| host          | 远程主机的地址         |                    |<br>| user          | 使用者名称            |                    |<br>| root          |  远程主机的根目录      |                    |<br>| port          | 端口                 |       <span class="hljs-number">22</span>           |<br>| delete        | 删除远程主机上的旧文件   |  <span class="hljs-keyword">true</span>              |<br>| verbose       | 显示调试信息           |   <span class="hljs-keyword">true</span>             |<br>| ignore_errors | 忽略错误              |     <span class="hljs-keyword">false</span>          |</code></pre></p><p><table></table></p><p><thead></thead></p><p><tr></tr></p><p><th>参数</th></p><p><th align="center">说明</th></p><p><th align="center">默认值</th><br><br></p><p><tbody></tbody></p><p><tr></tr></p><p><td>host</td></p><p><td align="center">远程主机的地址</td></p><p><td align="center"></td><br></p><p><tr></tr></p><p><td>user</td></p><p><td align="center">使用者名称</td></p><p><td align="center"></td><br></p><p><tr></tr></p><p><td>root</td></p><p><td align="center">远程主机的根目录</td></p><p><td align="center"></td><br></p><p><tr></tr></p><p><td>port</td></p><p><td align="center">端口</td></p><p><td align="center">22</td><br></p><p><tr></tr></p><p><td>delete</td></p><p><td align="center">删除远程主机上的旧文件</td></p><p><td align="center">true</td><br></p><p><tr></tr></p><p><td>verbose</td></p><p><td align="center">显示调试信息</td></p><p><td align="center">true</td><br></p><p><tr></tr></p><p><td>ignore_errors</td></p><p><td align="center">忽略错误</td></p><p><td align="center">false</td><br><br><br><br>最后:<br>还是要注意特殊字符的处理,其他的就是排版样式的问题,特殊字符没处理好,就是Hexo渲染报错</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;/p&gt;&lt;h1 id=&quot;基本语法&quot;&gt;基本语法&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h2 id=&quot;0-特殊字符&quot;&gt;&lt;a name=&quot;t1&quot;&gt;&lt;/a&gt;(0) 特殊字符&lt;/h2&gt;&lt;br&gt;之所以把特殊字符放到最前面,就是因为Markdown对特殊字符处理不是很友好,很容易出现很
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>纯js元素拖放插件——Dragula</title>
+    <link href="http://yoursite.com/2018/05/09/%E7%BA%AFjs%E5%85%83%E7%B4%A0%E6%8B%96%E6%94%BE%E6%8F%92%E4%BB%B6%E2%80%94%E2%80%94Dragula/"/>
+    <id>http://yoursite.com/2018/05/09/纯js元素拖放插件——Dragula/</id>
+    <published>2018-05-09T04:53:30.000Z</published>
+    <updated>2018-05-09T04:53:43.465Z</updated>
+    
+    <content type="html"><![CDATA[<p>Dragula是一款支持移动触摸屏设备的纯js元素拖放插件。这个元素拖放插件使用简单，浏览器兼容性好，能够实现通过鼠标或在移动设备中通过手指来拖动DOM元素的位置。它的特点有：</p><ul><br>     <li>设置非常简单</li><br>     <li>没有外部依赖</li><br>     <li>可以自动对数据进行排序</li><br>     <li>被移动项带有半透明的视觉效果</li><br>     <li>支持移动触摸设备</li><br>     <li>兼容性好，支持IE7+的所有现代浏览器</li><br></ul><br><h3>安装</h3><br>可以通过bower或npm来安装该元素拖放插件。<br><table class="syntaxhighlighter  html" border="0" cellspacing="0" cellpadding="0"><br><tbody><br><tr><br><td class="gutter"><br><div class="line number1 index0 alt2">1</div><br><div class="line number2 index1 alt1">2</div></td><br><td class="code"><br><div class="container"><br><div class="line number1 index0 alt2"><code class="html plain">npm install dragula –save</code></div><br><div class="line number2 index1 alt1"><code class="html plain">bower install dragula.js –save              </code></div><br></div></td><br></tr><br></tbody><br></table><br><h3>使用方法</h3><br>该元素拖动插件提供了一个最简单的API来让你可以在页面中拖放元素。<br><table class="syntaxhighlighter  js" border="0" cellspacing="0" cellpadding="0"><br><tbody><br><tr><br><td class="gutter"><br><div class="line number1 index0 alt2">1</div></td><br><td class="code"><br><div class="container"><br><div class="line number1 index0 alt2"><code class="js plain">dragula(containers, options?)               </code></div><br></div></td><br></tr><br></tbody><br></table><br>默认情况下，<code>dragula</code>允许用户在<code>containers</code>中拖动一个元素，并将元素放置到<code>containers</code>列表的其它容器中。如果元素被放置在<code>containers</code>列表元素之外，插件将取消<code>revertOnSpill</code>和<code>removeOnSpill</code>选项。<br><br>注意：拖拽事件只会发生在用户鼠标左键点击的时候，并且没有meta键被按下。如果点击的是按钮或超链接元素，拖拽事件也会被忽略。<br><br>下面的例子允许用户将元素从<code>left</code>容器拖放到<code>right</code>容器，或从<code>right</code>容器拖放到<code>left</code>容器中。<br><table class="syntaxhighlighter  js" border="0" cellspacing="0" cellpadding="0"><br><tbody><br><tr><br><td class="gutter"><br><div class="line number1 index0 alt2">1</div></td><br><td class="code"><br><div class="container"><br><div class="line number1 index0 alt2"><code class="js plain">dragula([left, right]);               </code></div><br></div></td><br></tr><br></tbody><br></table><br><h3>配置参数</h3><br>你也可以为它提供一些参数选项：<br><table class="syntaxhighlighter  js" border="0" cellspacing="0" cellpadding="0"><br><tbody><br><tr><br><td class="gutter"><br><div class="line number1 index0 alt2">1</div><br><div class="line number2 index1 alt1">2</div><br><div class="line number3 index2 alt2">3</div><br><div class="line number4 index3 alt1">4</div><br><div class="line number5 index4 alt2">5</div><br><div class="line number6 index5 alt1">6</div><br><div class="line number7 index6 alt2">7</div><br><div class="line number8 index7 alt1">8</div><br><div class="line number9 index8 alt2">9</div><br><div class="line number10 index9 alt1">10</div><br><div class="line number11 index10 alt2">11</div><br><div class="line number12 index11 alt1">12</div></td><br><td class="code"><br><div class="container"><br><div class="line number1 index0 alt2"><code class="js plain">dragula(containers, {</code></div><br><div class="line number2 index1 alt1"><code class="js spaces">  </code><code class="js plain">moves: </code><code class="js keyword">function</code> <code class="js plain">(el, container) {</code></div><br><div class="line number3 index2 alt2"><code class="js spaces">    </code><code class="js keyword">return</code> <code class="js keyword">true</code><code class="js plain">;         </code><code class="js comments">// elements are always draggable by default</code></div><br><div class="line number4 index3 alt1"><code class="js spaces">  </code><code class="js plain">},</code></div><br><div class="line number5 index4 alt2"><code class="js spaces">  </code><code class="js plain">accepts: </code><code class="js keyword">function</code> <code class="js plain">(el, target, source, sibling) {</code></div><br><div class="line number6 index5 alt1"><code class="js spaces">    </code><code class="js keyword">return</code> <code class="js keyword">true</code><code class="js plain">;         </code><code class="js comments">// elements can be dropped in any of the <code>containers</code> by default</code></div><br><div class="line number7 index6 alt2"><code class="js spaces">  </code><code class="js plain">},</code></div><br><div class="line number8 index7 alt1"><code class="js spaces">  </code><code class="js plain">direction: </code><code class="js string">‘vertical’</code><code class="js plain">, </code><code class="js comments">// Y axis is considered when determining where an element would be dropped</code></div><br><div class="line number9 index8 alt2"><code class="js spaces">  </code><code class="js plain">copy: </code><code class="js keyword">false</code><code class="js plain">,           </code><code class="js comments">// elements are moved by default, not copied</code></div><br><div class="line number10 index9 alt1"><code class="js spaces">  </code><code class="js plain">revertOnSpill: </code><code class="js keyword">false</code><code class="js plain">,  </code><code class="js comments">// spilling will put the element back where it was dragged from, if this is true</code></div><br><div class="line number11 index10 alt2"><code class="js spaces">  </code><code class="js plain">removeOnSpill: </code><code class="js keyword">false</code>   <code class="js comments">// spilling will <code>.remove</code> the element, if this is true</code></div><br><div class="line number12 index11 alt1"><code class="js plain">});               </code></div><br></div></td><br></tr><br></tbody><br></table><br><ul><br>     <li><span class="m">options.moves</span>：你可以定义一个<code>moves</code>方法，该方法在发生点击的时候通过<code>(el, container)</code>参数进行调用。如果该方法返回的是<code>false</code>，拖拽事件将不会开始，事件也不会被阻止。</li><br>     <li><span class="m">options.accepts</span>：该方法确保一个来自<code>source</code>的元素<code>el</code>能够在<code>sibling</code>元素之前放入到<code>target</code>容器之中。<code>sibling</code>元素可以为<code>null</code>，这会使元素被放置到容器的最后一个位置。注意：如果<code>options.copy</code>设置为<code>true</code>，<code>el元素会被设置为一个副本，替代原始的拖放元素。</code></li><br>     <li><span class="m">options.copy</span>：如果<code>copy</code>设置为<code>true</code>，元素将被复制而不是拖动。注意下面的区别：<br><div class="table-responsive"><br><table class="table table-striped"><br><thead><br><tr><br><td>Event</td><br><td>Move</td><br><td>Copy</td><br></tr><br></thead><br><tbody><br><tr><br><td>drag</td><br><td>元素从<code>source</code>中隐藏</td><br><td>Nothing happens</td><br></tr><br><tr><br><td>drop</td><br><td>元素将移动到<code>target</code>中</td><br><td>元素会被克隆到<code>target</code>中</td><br></tr><br><tr><br><td>remove</td><br><td>元素会从DOM中移除</td><br><td>Nothing happens</td><br></tr><br><tr><br><td>cancel</td><br><td>元素会停留在<code>source</code>中</td><br><td>Nothing happens</td><br></tr><br></tbody><br></table><br></div></li><br>     <li><span class="m">options.revertOnSpill</span>：默认情况下，元素被拖放到容器之外会被放置到由<code> feedback shadow</code>设定的投放点上。设置<code>revertOnSpill</code>为<code>true</code>将确保元素在拖放到容器之外时会被重新放置会拖放的开始位置。</li><br>     <li><span class="m">options.removeOnSpill</span>：设置<code>removeOnSpill</code>为<code>true</code>会使任何拖放到容器之外的元素被从DOM中移除。注意：如果<code>copy</code>设置为<code>true</code>，<code>remove</code>事件将不会触发。</li><br>     <li><span class="m">options.direction</span>：当元素被拖放到一个容器中，它将被放置到最接近鼠标位置的点上。如果<code>direction</code>设置为<code>vertical</code>，将会使用Y轴坐标作为参考带你，如果设置为<code>horizontal</code>会使用X轴坐标作为参考点。</li><br></ul><br><h3>事件</h3><br><ul><br>     <li><span class="m">drake.end()</span>：使用最后位置的预览阴影标记最为拖放的目的地拖放元素。相应的<code>cancel</code>或<code>drop</code>事件将被触发。</li><br>     <li><span class="m">drake.cancel(revert)</span>：如果被<code>drake</code>管理的元素是当前被拖放的元素，这个方法会取消拖放事件。你也可以在该方法的调用级别中传入<code>revert</code>参数，效果与<code>revertOnSpill</code>设置为<code>true</code>相同。注意：一个”cancellation”将在下面的场景中会返回一个”cancel”事件：<br><ul><br>     <li><code>revertOnSpill</code>设置为<code>true</code></li><br>     <li>放置的目标（半透明的预览图）在source容器中，并且元素被放置到相同的容器中。</li><br></ul><br></li><br>     <li><span class="m">drake.remove()</span>：如果被<code>drake</code>管理的元素是当前被拖放的元素，该方法会将元素从DOM中移除。</li><br>     <li><span class="m">drake.on (Events)</span>：<code>drake</code>是一个事件发送器。下面的事件可以使用<code>drake.on(type, listener)</code>来跟踪。<br><div class="table-responsive"><br><table class="table table-striped"><br><thead><br><tr><br><td>事件名称</td><br><td>参数</td><br><td>描述</td><br></tr><br></thead><br><tbody><br><tr><br><td>drag</td><br><td>el, container</td><br><td><code>el</code>从<code>container</code>中被拖拽</td><br></tr><br><tr><br><td>drop</td><br><td>el, container, source</td><br><td><code>el</code>被放置到<code>container</code>中，它来自<code>source</code></td><br></tr><br><tr><br><td>cancel</td><br><td>el, container</td><br><td><code>el</code>被拖动但仍在原处，并最终回到<code>container</code></td><br></tr><br><tr><br><td>remove</td><br><td>el, container</td><br><td><code>el</code>被拖动但仍在原处，并最终被从DOM中移除。</td><br></tr><br><tr><br><td>shadow</td><br><td>el, container</td><br><td><code>el</code>是拖放目的地的半透明预览，它会移动到<code>container</code>中。</td><br></tr><br></tbody><br></table><br></div></li><br>     <li><span class="m">drake.destroy()</span>：移除所有的拖放事件。如果<code>.destroy</code>在一个元素被拖动时触发，拖动将不会有效果。</li><br></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Dragula是一款支持移动触摸屏设备的纯js元素拖放插件。这个元素拖放插件使用简单，浏览器兼容性好，能够实现通过鼠标或在移动设备中通过手指来拖动DOM元素的位置。它的特点有：&lt;/p&gt;
+&lt;ul&gt;&lt;br&gt;     &lt;li&gt;设置非常简单&lt;/li&gt;&lt;br&gt;     &lt;li&gt;没有外
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>H5中插入音乐，点击控制播放</title>
+    <link href="http://yoursite.com/2018/05/09/H5%E4%B8%AD%E6%8F%92%E5%85%A5%E9%9F%B3%E4%B9%90%EF%BC%8C%E7%82%B9%E5%87%BB%E6%8E%A7%E5%88%B6%E6%92%AD%E6%94%BE/"/>
+    <id>http://yoursite.com/2018/05/09/H5中插入音乐，点击控制播放/</id>
+    <published>2018-05-09T04:41:58.000Z</published>
+    <updated>2018-05-09T04:42:35.443Z</updated>
+    
+    <content type="html"><![CDATA[<p>html设置：</p><pre class="prettyprint">&lt;link rel="prefetch" href="demo.mp3"&gt;&lt;audio id="Jaudio" class="media-audio" src="demo.mp3" preload loop="loop"&gt;&lt;/audio &gt;&lt;div id="audioPlay" class="animated"&gt;&lt;/div&gt;</pre>js设置：<pre class="prettyprint">function audioAutoPlay(id) { var audio = document.getElementById(id); audio.play(); document.addEventListener("WeixinJSBridgeReady", function() { audio.play(); }, false);};function audioAutoStop(id) { var audio = document.getElementById(id); audio.pause(); document.addEventListener("WeixinJSBridgeReady", function() { audio.pause(); }, false);};audioAutoPlay('Jaudio');$("#audioPlay").on('click', function() { var audioPlayer = document.querySelector('audio#Jaudio'); if (audioPlayer.paused) { audioAutoPlay('Jaudio'); $("#audioPlay").css("animation-play-state", "running") } else { audioAutoStop('Jaudio'); $("#audioPlay").css("animation-play-state", "paused") }})</pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;html设置：&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;&amp;lt;link rel=&quot;prefetch&quot; href=&quot;demo.mp3&quot;&amp;gt;
+
+&amp;lt;audio id=&quot;Jaudio&quot; class=&quot;media-audio&quot; src=&quot;demo.mp3
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>jquery 获取元素背景图片backgroungImage的url</title>
+    <link href="http://yoursite.com/2018/05/09/jquery-%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87backgroungImage%E7%9A%84url/"/>
+    <id>http://yoursite.com/2018/05/09/jquery-获取元素背景图片backgroungImage的url/</id>
+    <published>2018-05-09T04:37:46.000Z</published>
+    <updated>2018-05-09T04:39:27.032Z</updated>
+    
+    <content type="html"><![CDATA[<pre class="prettyprint">$("#").css("backgroundImage").replace('url(','').replace(')','');</pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre class=&quot;prettyprint&quot;&gt;
+$(&quot;#&quot;).css(&quot;backgroundImage&quot;).replace(&#39;url(&#39;,&#39;&#39;).replace(&#39;)&#39;,&#39;&#39;);&lt;/pre&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[微信小程序]</title>
+    <link href="http://yoursite.com/2018/05/09/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://yoursite.com/2018/05/09/微信小程序/</id>
+    <published>2018-05-09T04:36:28.000Z</published>
+    <updated>2018-05-09T04:36:38.766Z</updated>
+    
+    <content type="html"><![CDATA[<p>2018年初微信小游戏跳一跳的火爆带热了一批左小程序的热潮，我们在小程序上有一些项目实战经验，也在实现业务逻辑的过程中遇到过一些问题，这里对于遇到的问题进行一个汇总和记录式的填坑，需要沟通的小伙伴可以加微信 <em>xjw005 </em>沟通</p><p><blockquote></blockquote></p><p></p><p style="text-align: center;"><strong>图片单张上传</strong></p><br><br>html设置：<p></p><pre class="prettyprint">&lt;button bindtap="upimg" class='jia_img' &gt;上传&lt;/button&gt; &lt;image src=""&gt;&lt;/image&gt;</pre>js设置：<pre class="prettyprint">data{ tempFilePaths:[]; },  upimg: function () {  wx.chooseImage({  success: function (res) {  var data = {  program_id: app.jtappid  }  var tempFilePaths = res.tempFilePaths //图片  wx.uploadFile({  url: 'aaa.cn', //仅为示例，非真实的接口地址  filePath: tempFilePaths[0],  name: 'add_image', //文件对应的参数名字(key)  formData: data, //其它的表单信息  success: function (res) {  }  })  }  })  },</pre><blockquote><p style="text-align: center;"><strong>图片多张上传</strong></p></blockquote>html设置：<pre class="prettyprint">&lt;view class="big-logos"&gt;  &lt;image bindtap="upimg" src='../../../image/s.png'&gt;&lt;/image&gt;  &lt;block wx:for="" wx:key="index"&gt;  &lt;view class='logoinfo'&gt;  &lt;text class='xxx' bindtap='xxx' data-index=''&gt;x&lt;/text&gt;  &lt;image src=''&gt;&lt;/image&gt;  &lt;/view&gt;  &lt;/block&gt; &lt;/view&gt; &lt;button class='top_20 btn' bindtap="upconfirm"&gt;确定&lt;/button&gt;</pre>js设置：<pre class="prettyprint">upconfirm: function () {  this.up(); }, up: function () {  var that = this;  data = {  openid: app.openid,  program_id: app.program_id,  only_num: only_num  }  wx.uploadFile({  url: 'pg.php/Aishen/upload_photo',  filePath: that.data.img_arr[i],  name: 'image', //文件对应的参数名字(key)  formData: data, //其它的表单信息  success: function (res) {  }, complete: function (complete) {  console.log(complete)  i++  if (i == that.data.img_arr.length) {  util.request('https://sz800800.cn/pg.php/Aishen/uploade_photo_r', 'post', { 'only_num': only_num }, '正在加载数据', function (res) {  console.log(res)  if (res.data.state == 1) {  wx.showModal({  title: '提示',  content: '提交成功!',  success: function (res) {  that.onLoad()  wx.navigateBack({  delta: 1  })  }  })  } else {  wx.showModal({  title: '提示',  content: '提交失败,请重新提交!',  })  }  })  } else if (i &lt; that.data.img_arr.length) {//若图片还没有传完，则继续调用函数  that.up()  }  }  }) }, // 上传 upimg: function () {  var that = this;  if (this.data.img_arr.length &lt; 12) {  wx.chooseImage({  sizeType: ['original', 'compressed'],  success: function (res) {  that.setData({  img_arr: that.data.img_arr.concat(res.tempFilePaths)  })  num = that.data.img_arr.length  }  })  } else {  wx.showToast({  title: '最多上传12张图片',  icon: 'loading',  duration: 3000  });  } },</pre><blockquote><p style="text-align: center;">ES6对两个数组的去重操作</p></blockquote><pre class="prettyprint">key =&gt; !arr.includes(key)</pre><blockquote><p style="text-align: center;">改变数组的某一个键值</p></blockquote><pre class="prettyprint">var iset = "markers[" + i + "].alpha"; this.setData({ [iset]: 1 })</pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;2018年初微信小游戏跳一跳的火爆带热了一批左小程序的热潮，我们在小程序上有一些项目实战经验，也在实现业务逻辑的过程中遇到过一些问题，这里对于遇到的问题进行一个汇总和记录式的填坑，需要沟通的小伙伴可以加微信 &lt;em&gt;xjw005 &lt;/em&gt;沟通&lt;/p&gt;
+&lt;p&gt;&lt;blockq
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Jquery动态获取img src/动态获取html标题</title>
+    <link href="http://yoursite.com/2018/05/09/Jquery%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96img-src-%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96html%E6%A0%87%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/05/09/Jquery动态获取img-src-动态获取html标题/</id>
+    <published>2018-05-09T04:34:04.000Z</published>
+    <updated>2018-05-09T04:34:16.443Z</updated>
+    
+    <content type="html"><![CDATA[<div class="highlighter-rouge"><br><pre class="highlight prettyprint"><span class="kwd">var</span><span class="pln"> url </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">children</span><span class="pun">(</span><span class="str">“img”</span><span class="pun">).</span><span class="pln">attr</span><span class="pun">(</span><span class="str">“src”</span><span class="pun">);</span><span class="pln"><br>$</span><span class="pun">(</span><span class="str">“.da_case”</span><span class="pun">).</span><span class="pln">attr</span><span class="pun">(</span><span class="str">“src”</span><span class="pun">,</span><span class="pln"> url</span><span class="pun">);</span><br><span class="kwd">var</span><span class="pln"> res </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">children</span><span class="pun">(</span><span class="str">“p”</span><span class="pun">).</span><span class="pln">html</span><span class="pun">();</span><span class="com">// 获取当前点击的li的值</span><span class="pln"><br>$</span><span class="pun">(</span><span class="str">“.ct_titt”</span><span class="pun">).</span><span class="pln">html</span><span class="pun">(</span><span class="pln">res</span><span class="pun">);</span> <span class="com">//将获取的值赋值</span></pre><br></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;br&gt;&lt;pre class=&quot;highlight prettyprint&quot;&gt;&lt;span class=&quot;kwd&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; url &lt;/span&gt;&lt;span class=
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>通过Display:box构建自动响应式多列布局</title>
+    <link href="http://yoursite.com/2018/05/09/%E9%80%9A%E8%BF%87Display-box%E6%9E%84%E5%BB%BA%E8%87%AA%E5%8A%A8%E5%93%8D%E5%BA%94%E5%BC%8F%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/"/>
+    <id>http://yoursite.com/2018/05/09/通过Display-box构建自动响应式多列布局/</id>
+    <published>2018-05-09T03:26:37.000Z</published>
+    <updated>2018-05-09T03:28:44.536Z</updated>
+    
+    <content type="html"><![CDATA[<p>父节点：</p><pre class="prettyprint"><span class="atv"><span class="pun">display: -webkit-flex; -webkit-flex-flow: row; -webkit-align-items: stretch; -webkit-justify-content: space-between; /*IE10还不支持*/ display: -ms-flex; -ms-flex-flow: row wrap; -ms-align-items: stretch; -ms-justify-content: space-between; display: flex; flex-flow: row; align-items: stretch; justify-content: space-between;</span></span></pre>子节点：<pre class="prettyprint">-webkit-flex: 1; -moz-flex: 1; flex: 1;</pre>切换js：<pre class="prettyprint">$('.service .left ul li').click(function(){ $(this).addClass('active').siblings().removeClass('active'); $('.service .right&gt;section:eq('+$(this).index()+')').fadeIn().siblings("section").hide()})</pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;父节点：&lt;/p&gt;
+&lt;pre class=&quot;prettyprint&quot;&gt;&lt;span class=&quot;atv&quot;&gt;&lt;span class=&quot;pun&quot;&gt;display: -webkit-flex;
+ -webkit-flex-flow: row;
+ -webkit-align-item
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>jQuery延迟加载(懒加载)插件 – jquery.lazyload.js</title>
+    <link href="http://yoursite.com/2018/05/09/jQuery%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD-%E6%87%92%E5%8A%A0%E8%BD%BD-%E6%8F%92%E4%BB%B6-%E2%80%93-jquery-lazyload-js/"/>
+    <id>http://yoursite.com/2018/05/09/jQuery延迟加载-懒加载-插件-–-jquery-lazyload-js/</id>
+    <published>2018-05-09T03:24:43.000Z</published>
+    <updated>2018-05-09T03:25:12.050Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 Web 上引入jquery，然后引入下面的lazyload.js：</p><p><div class="highlighter-rouge"></div></p><p><pre class="highlight prettyprint"><code>&lt;script src=”<a href="http://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.js&quot;&gt;&lt;/script" target="_blank" rel="noopener">http://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.js&quot;&gt;&lt;/script</a>&gt;<br></code></pre><br><br>在需要延时加载的图片上加上lazy类，资源图片使用data-original=””的方式引入，如下：</p><p><div class="highlighter-rouge"></div></p><p><pre class="highlight prettyprint">&lt;img data-original=”images/mei/mei_02.png” class=”img_respon lazy” alt=”” width=”600” height=”300”&gt;</pre><br><br>启动js</p><p><pre class="highlight prettyprint">&lt;script&gt;<br>$(function() {<br>$(‘img.lazy’).lazyload({<br>effect : “fadeIn”,<br>skip_invisible : false,<br>container: $(“.content”)<br>});<br>});<br>&lt;/script&gt;</pre><br>&nbsp;</p><p><strong>这样就完成了图片懒加载的效果</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在 Web 上引入jquery，然后引入下面的lazyload.js：&lt;/p&gt;
+&lt;p&gt;&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;&lt;pre class=&quot;highlight prettyprint&quot;&gt;&lt;code&gt;&amp;lt;scri
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/05/09/hello-world/"/>
+    <id>http://yoursite.com/2018/05/09/hello-world/</id>
+    <published>2018-05-09T02:57:57.979Z</published>
+    <updated>2018-03-26T03:07:55.915Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>code style</title>
@@ -52,27 +253,6 @@
       
         &lt;p&gt;这的我很爱你&lt;br&gt;不知道 为什么&lt;/p&gt;
 
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/03/26/hello-world/"/>
-    <id>http://yoursite.com/2018/03/26/hello-world/</id>
-    <published>2018-03-26T03:07:55.915Z</published>
-    <updated>2018-03-26T03:07:55.915Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
       
     
     </summary>
