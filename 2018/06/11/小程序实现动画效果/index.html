@@ -106,17 +106,17 @@
 
 
 
-  <meta name="description" content="图片延迟加载lazyload,使用延迟加载在可提高网页下载速度。在大多数情况下，它也能帮助减轻服务器负载。  html:1&amp;lt;img class=&amp;quot;datu lazy&amp;quot; src=&amp;quot;./images/default.png&amp;quot; data-src=&amp;quot;./images/img/1.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt; css:">
+  <meta name="description" content="最近一直在和加拿大客户DominicG合作小程序开发，其间遇到需要实现动效果，其间考虑了@keyframes写法,但是效果和实现复杂程度都相对略高，最后采用双css类变换，通过transtion延时来达到动画效果，无论是体验还是运行都很好，这在里给大家分享出来核心代码，供有需要的同学参考  wxml:1&amp;lt;image class=&amp;apos;upload-btn &amp;#123;&amp;#123;ro">
 <meta property="og:type" content="article">
-<meta property="og:title" content="lazyLoad图片懒加载">
-<meta property="og:url" content="http://yoursite.com/2018/05/25/lazyLoad图片懒加载/index.html">
+<meta property="og:title" content="[小程序实]-现动画效果">
+<meta property="og:url" content="http://yoursite.com/2018/06/11/小程序实现动画效果/index.html">
 <meta property="og:site_name" content="Kenta&#39;s blog">
-<meta property="og:description" content="图片延迟加载lazyload,使用延迟加载在可提高网页下载速度。在大多数情况下，它也能帮助减轻服务器负载。  html:1&amp;lt;img class=&amp;quot;datu lazy&amp;quot; src=&amp;quot;./images/default.png&amp;quot; data-src=&amp;quot;./images/img/1.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt; css:">
+<meta property="og:description" content="最近一直在和加拿大客户DominicG合作小程序开发，其间遇到需要实现动效果，其间考虑了@keyframes写法,但是效果和实现复杂程度都相对略高，最后采用双css类变换，通过transtion延时来达到动画效果，无论是体验还是运行都很好，这在里给大家分享出来核心代码，供有需要的同学参考  wxml:1&amp;lt;image class=&amp;apos;upload-btn &amp;#123;&amp;#123;ro">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-25T08:34:10.000Z">
+<meta property="og:updated_time" content="2018-06-11T10:13:29.848Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lazyLoad图片懒加载">
-<meta name="twitter:description" content="图片延迟加载lazyload,使用延迟加载在可提高网页下载速度。在大多数情况下，它也能帮助减轻服务器负载。  html:1&amp;lt;img class=&amp;quot;datu lazy&amp;quot; src=&amp;quot;./images/default.png&amp;quot; data-src=&amp;quot;./images/img/1.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt; css:">
+<meta name="twitter:title" content="[小程序实]-现动画效果">
+<meta name="twitter:description" content="最近一直在和加拿大客户DominicG合作小程序开发，其间遇到需要实现动效果，其间考虑了@keyframes写法,但是效果和实现复杂程度都相对略高，最后采用双css类变换，通过transtion延时来达到动画效果，无论是体验还是运行都很好，这在里给大家分享出来核心代码，供有需要的同学参考  wxml:1&amp;lt;image class=&amp;apos;upload-btn &amp;#123;&amp;#123;ro">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/25/lazyLoad图片懒加载/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/11/小程序实现动画效果/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>lazyLoad图片懒加载 | Kenta's blog</title>
+  <title>[小程序实]-现动画效果 | Kenta's blog</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/lazyLoad图片懒加载/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/11/小程序实现动画效果/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kenta">
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">lazyLoad图片懒加载</h1>
+          <h1 class="post-title" itemprop="name headline">[小程序实]-现动画效果</h1>
         
 
         <div class="post-meta">
@@ -328,7 +328,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-25T16:24:26+08:00">2018-05-25</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-11T18:04:04+08:00">2018-06-11</time>
             
 
             
@@ -366,12 +366,10 @@
 
       
         <blockquote>
-<p>图片延迟加载lazyload,使用延迟加载在可提高网页下载速度。在大多数情况下，它也能帮助减轻服务器负载。</p>
+<p>最近一直在和加拿大客户DominicG合作小程序开发，其间遇到需要实现动效果，其间考虑了@keyframes写法,但是效果和实现复杂程度都相对略高，最后采用双css类变换，通过transtion延时来达到动画效果，无论是体验还是运行都很好，这在里给大家分享出来核心代码，供有需要的同学参考</p>
 </blockquote>
-<p>html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img class=&quot;datu lazy&quot; src=&quot;./images/default.png&quot; data-src=&quot;./images/img/1.jpg&quot; alt=&quot;&quot;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>css:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.lazy &#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    min-height: 100px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>custom.js:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var stuff = $(&apos;.lazy&apos;);</span><br><span class="line">var quantity = stuff.length;</span><br><span class="line">var n = 0; //存储图片加载到的位置，避免每次都从第一张图片开始遍历</span><br><span class="line">var placeholder = &apos;./images/default.png&apos;;</span><br><span class="line">var clientHeight = window.innerHeight || document.documentElement.clientHeight; //可见区域高度</span><br><span class="line">function lazyload() &#123;</span><br><span class="line">    for (var i = n; i &lt; quantity; i++) &#123;</span><br><span class="line">        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //滚动条距离顶部高度</span><br><span class="line">        if (stuff[i].offsetTop &lt; clientHeight + scrollTop) &#123;</span><br><span class="line">            if (stuff[i].getAttribute(&apos;src&apos;) == placeholder)</span><br><span class="line"></span><br><span class="line">                stuff[i].setAttribute(&apos;src&apos;, stuff[i].getAttribute(&apos;data-src&apos;));</span><br><span class="line">            n++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">lazyload();</span><br><span class="line">window.onscroll = lazyload;</span><br></pre></td></tr></table></figure></p>
-<p>lazyload.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var stuff = $(&apos;.lazy&apos;);</span><br><span class="line">var quantity = stuff.length;</span><br><span class="line">var n = 0; //存储图片加载到的位置，避免每次都从第一张图片开始遍历</span><br><span class="line">var placeholder = &apos;./images/default.png&apos;;</span><br><span class="line">var clientHeight = window.innerHeight || document.documentElement.clientHeight; //可见区域高度</span><br><span class="line">function lazyload() &#123;</span><br><span class="line">    for (var i = n; i &lt; quantity; i++) &#123;</span><br><span class="line">        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //滚动条距离顶部高度</span><br><span class="line">        if (stuff[i].offsetTop &lt; clientHeight + scrollTop) &#123;</span><br><span class="line">            if (stuff[i].getAttribute(&apos;src&apos;) == placeholder)</span><br><span class="line"></span><br><span class="line">                stuff[i].setAttribute(&apos;src&apos;, stuff[i].getAttribute(&apos;data-src&apos;));</span><br><span class="line">            n++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">lazyload();</span><br><span class="line">window.onscroll = lazyload;</span><br></pre></td></tr></table></figure></p>
+<p>wxml:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;image class=&apos;upload-btn &#123;&#123;roll?&quot;kroll&quot;:&quot;kroll2&quot;&#125;&#125;&apos; src=&apos;../../dist/images/add.png&apos; bindtap=&apos;tgbtn&apos;&gt;&lt;/image&gt;</span><br></pre></td></tr></table></figure></p>
+<p>wxss:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">.upload-btn1 &#123;</span><br><span class="line">  position: fixed;</span><br><span class="line">  right: 35rpx;</span><br><span class="line">  bottom: 30rpx;</span><br><span class="line">  z-index: 20;</span><br><span class="line">  width: 90rpx;</span><br><span class="line">  height: 90rpx;</span><br><span class="line">  border-radius: 90rpx;</span><br><span class="line">  box-shadow: 0 0 20rpx #807f84;</span><br><span class="line">  opacity: 0;</span><br><span class="line">  transition: 0.3s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.upload-btn12 &#123;</span><br><span class="line">  position: fixed;</span><br><span class="line">  right: 35rpx;</span><br><span class="line">  bottom: 150rpx;</span><br><span class="line">  z-index: 20;</span><br><span class="line">  width: 90rpx;</span><br><span class="line">  height: 90rpx;</span><br><span class="line">  border-radius: 90rpx;</span><br><span class="line">  box-shadow: 0 0 20rpx #807f84;</span><br><span class="line">  opacity: 1;</span><br><span class="line">  transition: 0.3s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -428,8 +426,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/09/前端福利-Hexo搭建个人博客/" rel="next" title="MarkDown语法十分钟上手">
-                <i class="fa fa-chevron-left"></i> MarkDown语法十分钟上手
+              <a href="/2018/05/29/日常用-Css-MediaQuery响应式写法/" rel="next" title="[日常用]-Css MediaQuery响应式写法">
+                <i class="fa fa-chevron-left"></i> [日常用]-Css MediaQuery响应式写法
               </a>
             
           </div>
@@ -437,10 +435,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/25/微信小程序-图片上传压缩尺寸，canvas方法/" rel="prev" title="[微信小程序]-图片上传压缩尺寸，canvas方法">
-                [微信小程序]-图片上传压缩尺寸，canvas方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
