@@ -106,17 +106,17 @@
 
 
 
-  <meta name="description" content="1234567891011121314code &amp;#123;    color: #ff7600;    background: #fbf7f8;    margin: 2px;&amp;#125;// 大代码块的自定义样式.highlight, pre &amp;#123;    margin: 5px 0;    padding: 5px;    border-radius: 3px;&amp;#125;.highl">
+  <meta name="description" content="这是一篇非常简洁的data-star实现讲解，废话不多说直接上源码，希望帮助到你  html12345&amp;lt;div class=&amp;quot;listbox&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;item&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;starbox&amp;quot; data-star=&amp;quot;4&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="code style">
-<meta property="og:url" content="http://yoursite.com/2018/03/26/code-style/index.html">
+<meta property="og:title" content="[Jquery]-实现data-star评价星级">
+<meta property="og:url" content="http://yoursite.com/2018/06/25/Jquery-实现data-star评价星级/index.html">
 <meta property="og:site_name" content="Kenta&#39;s blog">
-<meta property="og:description" content="1234567891011121314code &amp;#123;    color: #ff7600;    background: #fbf7f8;    margin: 2px;&amp;#125;// 大代码块的自定义样式.highlight, pre &amp;#123;    margin: 5px 0;    padding: 5px;    border-radius: 3px;&amp;#125;.highl">
+<meta property="og:description" content="这是一篇非常简洁的data-star实现讲解，废话不多说直接上源码，希望帮助到你  html12345&amp;lt;div class=&amp;quot;listbox&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;item&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;starbox&amp;quot; data-star=&amp;quot;4&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;l">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-03-26T04:52:10.000Z">
+<meta property="og:updated_time" content="2018-06-25T06:48:26.796Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="code style">
-<meta name="twitter:description" content="1234567891011121314code &amp;#123;    color: #ff7600;    background: #fbf7f8;    margin: 2px;&amp;#125;// 大代码块的自定义样式.highlight, pre &amp;#123;    margin: 5px 0;    padding: 5px;    border-radius: 3px;&amp;#125;.highl">
+<meta name="twitter:title" content="[Jquery]-实现data-star评价星级">
+<meta name="twitter:description" content="这是一篇非常简洁的data-star实现讲解，废话不多说直接上源码，希望帮助到你  html12345&amp;lt;div class=&amp;quot;listbox&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;item&amp;quot;&amp;gt;&amp;lt;span class=&amp;quot;starbox&amp;quot; data-star=&amp;quot;4&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;l">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/26/code-style/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/25/Jquery-实现data-star评价星级/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>code style | Kenta's blog</title>
+  <title>[Jquery]-实现data-star评价星级 | Kenta's blog</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/code-style/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/25/Jquery-实现data-star评价星级/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kenta">
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">code style</h1>
+          <h1 class="post-title" itemprop="name headline">[Jquery]-实现data-star评价星级</h1>
         
 
         <div class="post-meta">
@@ -328,7 +328,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-26T12:49:57+08:00">2018-03-26</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-25T14:43:52+08:00">2018-06-25</time>
             
 
             
@@ -365,7 +365,11 @@
       
 
       
-        <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#ff7600</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fbf7f8</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br><span class="line">// 大代码块的自定义样式</span><br><span class="line"><span class="selector-class">.highlight</span>, <span class="selector-tag">pre</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.highlight</span>, <span class="selector-tag">code</span>, <span class="selector-tag">pre</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#d6d6d6</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>这是一篇非常简洁的data-star实现讲解，废话不多说直接上源码，希望帮助到你</p>
+</blockquote>
+<p>html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;listbox&quot;&gt;</span><br><span class="line">&lt;div class=&quot;item&quot;&gt;</span><br><span class="line">&lt;span class=&quot;starbox&quot; data-star=&quot;4&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;.listbox .item&quot;).each(function() &#123;</span><br><span class="line">    var star = $(this).find(&quot;.starbox&quot;);</span><br><span class="line">    var num = star.data(&quot;star&quot;);</span><br><span class="line">    var html = &apos;&lt;i class=\&apos;iconfont\&apos;&gt;&amp;#xe61a;&lt;/i&gt;&apos;;</span><br><span class="line">    for (var i = 0; i &lt; num; i++) &#123;</span><br><span class="line">        star.append(html)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -422,8 +426,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/26/我爱你/" rel="next" title="我爱你">
-                <i class="fa fa-chevron-left"></i> 我爱你
+              <a href="/2018/06/13/乌克丽丽-零基础学习Day1/" rel="next" title="[乌克丽丽]-零基础学习Day1">
+                <i class="fa fa-chevron-left"></i> [乌克丽丽]-零基础学习Day1
               </a>
             
           </div>
@@ -432,8 +436,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/09/jQuery延迟加载-懒加载-插件-–-jquery-lazyload-js/" rel="prev" title="jQuery延迟加载(懒加载)插件 – jquery.lazyload.js">
-                jQuery延迟加载(懒加载)插件 – jquery.lazyload.js <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/25/css-文本单-多行溢出隐藏/" rel="prev" title="[css]-文本单/多行溢出隐藏">
+                [css]-文本单/多行溢出隐藏 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
