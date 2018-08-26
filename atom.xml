@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-25T06:51:41.914Z</updated>
+  <updated>2018-08-26T06:18:23.271Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>最新的博客测试</title>
+    <link href="http://yoursite.com/2018/08/26/%E6%9C%80%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2018/08/26/最新的博客测试/</id>
+    <published>2018-08-26T06:18:21.000Z</published>
+    <updated>2018-08-26T06:18:23.271Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是测试文字</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这是测试文字&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>[css]-文本单/多行溢出隐藏</title>
     <link href="http://yoursite.com/2018/06/25/css-%E6%96%87%E6%9C%AC%E5%8D%95-%E5%A4%9A%E8%A1%8C%E6%BA%A2%E5%87%BA%E9%9A%90%E8%97%8F/"/>
     <id>http://yoursite.com/2018/06/25/css-文本单-多行溢出隐藏/</id>
     <published>2018-06-25T06:49:39.000Z</published>
-    <updated>2018-06-25T06:51:41.914Z</updated>
+    <updated>2018-06-25T06:51:42.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>文本溢出隐藏是很常见也非常实用设计技巧，下面分别列出了单行、多行设置代码</p></blockquote><p>单行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">overflow: hidden;</span><br><span class="line">text-overflow:ellipsis;</span><br><span class="line">white-space: nowrap;</span><br></pre></td></tr></table></figure></p><p>多行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">display: -webkit-box;</span><br><span class="line">-webkit-box-orient: vertical;</span><br><span class="line">-webkit-line-clamp: 2;</span><br><span class="line">overflow: hidden;</span><br><span class="line"></span><br><span class="line">-webkit-line-clamp 限制块元素显示的文本行数</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -45,7 +67,7 @@
     <link href="http://yoursite.com/2018/06/25/Jquery-%E5%AE%9E%E7%8E%B0data-star%E8%AF%84%E4%BB%B7%E6%98%9F%E7%BA%A7/"/>
     <id>http://yoursite.com/2018/06/25/Jquery-实现data-star评价星级/</id>
     <published>2018-06-25T06:43:52.000Z</published>
-    <updated>2018-06-25T06:48:26.796Z</updated>
+    <updated>2018-06-25T06:48:28.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>这是一篇非常简洁的data-star实现讲解，废话不多说直接上源码，希望帮助到你</p></blockquote><p>html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;listbox&quot;&gt;</span><br><span class="line">&lt;div class=&quot;item&quot;&gt;</span><br><span class="line">&lt;span class=&quot;starbox&quot; data-star=&quot;4&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><p>js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;.listbox .item&quot;).each(function() &#123;</span><br><span class="line">    var star = $(this).find(&quot;.starbox&quot;);</span><br><span class="line">    var num = star.data(&quot;star&quot;);</span><br><span class="line">    var html = &apos;&lt;i class=\&apos;iconfont\&apos;&gt;&amp;#xe61a;&lt;/i&gt;&apos;;</span><br><span class="line">    for (var i = 0; i &lt; num; i++) &#123;</span><br><span class="line">        star.append(html)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -69,7 +91,7 @@
     <link href="http://yoursite.com/2018/06/13/%E4%B9%8C%E5%85%8B%E4%B8%BD%E4%B8%BD-%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0Day1/"/>
     <id>http://yoursite.com/2018/06/13/乌克丽丽-零基础学习Day1/</id>
     <published>2018-06-13T11:39:26.000Z</published>
-    <updated>2018-06-13T11:59:13.468Z</updated>
+    <updated>2018-06-13T11:59:14.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>Ukulele陪伴我已经很长时间了，在午后清风，或是在清晨慵懒惺忪，只要简单弹上一会就会觉得很幸福。在这里把学习方法整理成一个特辑，带给各位同学~</p></blockquote><p><img src="https://kenta-plugin.oss-cn-shanghai.aliyuncs.com/Ukulele/tech1_01.png" alt=""></p><h1 id="一-乌克丽丽的持琴姿势"><a href="#一-乌克丽丽的持琴姿势" class="headerlink" title="一.乌克丽丽的持琴姿势"></a>一.乌克丽丽的持琴姿势</h1><p>琴头朝向身体的左侧，琴体对应胸前正前方，大概45°方向，右手四根手指从琴体前段的下侧托住琴体。同时，右手前臂夹住琴体正面尾部，保持肘关节和腕关节的灵活，特别是在扫弦或者拨弦时，保证腕关节在动，而不是整支手臂在摆动。</p><p><img src="https://kenta-plugin.oss-cn-shanghai.aliyuncs.com/Ukulele/tech1_04.png" alt=""><br><img src="https://kenta-plugin.oss-cn-shanghai.aliyuncs.com/Ukulele/tech1_07.png" alt=""><br><img src="https://kenta-plugin.oss-cn-shanghai.aliyuncs.com/Ukulele/tech1_09.png" alt=""></p><h1 id="二-乌克丽丽如何调音"><a href="#二-乌克丽丽如何调音" class="headerlink" title="二.乌克丽丽如何调音"></a>二.乌克丽丽如何调音</h1><p>调音步骤：<br>1、认识和弦<br>琴头向上，从左到右分别是G弦、C弦、E弦、A弦。简谱分别代表5,1,3,6。其中C弦（简谱1）最粗，A弦（简谱6）最细，认识清楚之后，调音就根据这个标准来调。 </p><p>2、调音器只要夹在琴头上，显示屏就会亮起来，如果调音器显示的是红色或者是橙色的字母的话，那说明音调都不准。 </p><p>3、开始调音<br>当拨动琴弦时，调音器的显示屏上上方的指针以及字母会左右变化，比如指针偏左，说明音调偏低（琴弦偏松），指针偏右，说明音调偏高（琴弦偏紧），这说明音调还没调好。当指针居中显示并且屏幕显示绿色字母时，这时和弦的某个音调就调标准了。（此刻调音器显示的是第四根和弦G） </p><p>4、有些朋友买的琴没有送调音器的情况下，也可以在手机APP上下载一个乌克丽丽调音器。 </p><p><img src="https://kenta-plugin.oss-cn-shanghai.aliyuncs.com/Ukulele/tech1_11.png" alt=""></p><h1 id="三-乌克丽丽如何识谱"><a href="#三-乌克丽丽如何识谱" class="headerlink" title="三.乌克丽丽如何识谱"></a>三.乌克丽丽如何识谱</h1><p><a href="https://www.zhihu.com/question/51774860/answer/150425920" target="_blank" rel="noopener"><img src="https://kenta-plugin.oss-cn-shanghai.aliyuncs.com/Ukulele/tech1_14.png" alt=""></a></p><blockquote><p>到这里第一节课你就学完了,有没有感觉收获满满呢，下面会放一首单音指弹谱，试试看能不能弹出熟悉的旋律呢(没有放曲名，如果你弹奏出来并且知道了答案，记得留言给我~)</p></blockquote><p><img src="https://kenta-plugin.oss-cn-shanghai.aliyuncs.com/Ukulele/tech1_17.png" alt=""></p>]]></content>
     
@@ -93,7 +115,7 @@
     <link href="http://yoursite.com/2018/06/11/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/"/>
     <id>http://yoursite.com/2018/06/11/小程序实现动画效果/</id>
     <published>2018-06-11T10:04:04.000Z</published>
-    <updated>2018-06-13T12:02:28.219Z</updated>
+    <updated>2018-06-13T12:02:30.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>最近一直在和加拿大客户DominicG合作小程序开发，其间遇到需要实现动效果，其间考虑了@keyframes写法,但是效果和实现复杂程度都相对略高，最后采用双css类变换，通过transtion延时来达到动画效果，无论是体验还是运行都很好，这在里给大家分享出来核心代码，供有需要的同学参考</p></blockquote><p>wxml:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;image class=&apos;upload-btn &#123;&#123;roll?&quot;kroll&quot;:&quot;kroll2&quot;&#125;&#125;&apos; src=&apos;../../dist/images/add.png&apos; bindtap=&apos;tgbtn&apos;&gt;&lt;/image&gt;</span><br></pre></td></tr></table></figure></p><p>wxss:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">.upload-btn1 &#123;</span><br><span class="line">  position: fixed;</span><br><span class="line">  right: 35rpx;</span><br><span class="line">  bottom: 30rpx;</span><br><span class="line">  z-index: 20;</span><br><span class="line">  width: 90rpx;</span><br><span class="line">  height: 90rpx;</span><br><span class="line">  border-radius: 90rpx;</span><br><span class="line">  box-shadow: 0 0 20rpx #807f84;</span><br><span class="line">  opacity: 0;</span><br><span class="line">  transition: 0.3s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.upload-btn12 &#123;</span><br><span class="line">  position: fixed;</span><br><span class="line">  right: 35rpx;</span><br><span class="line">  bottom: 150rpx;</span><br><span class="line">  z-index: 20;</span><br><span class="line">  width: 90rpx;</span><br><span class="line">  height: 90rpx;</span><br><span class="line">  border-radius: 90rpx;</span><br><span class="line">  box-shadow: 0 0 20rpx #807f84;</span><br><span class="line">  opacity: 1;</span><br><span class="line">  transition: 0.3s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -115,7 +137,7 @@
     <link href="http://yoursite.com/2018/05/29/%E6%97%A5%E5%B8%B8%E7%94%A8-Css-MediaQuery%E5%93%8D%E5%BA%94%E5%BC%8F%E5%86%99%E6%B3%95/"/>
     <id>http://yoursite.com/2018/05/29/日常用-Css-MediaQuery响应式写法/</id>
     <published>2018-05-29T08:46:35.000Z</published>
-    <updated>2018-05-29T08:48:24.899Z</updated>
+    <updated>2018-05-29T08:48:26.000Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media screen and (min-width:640px) &#123;</span><br><span class="line">.code:&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -136,7 +158,7 @@
     <link href="http://yoursite.com/2018/05/29/hello-world/"/>
     <id>http://yoursite.com/2018/05/29/hello-world/</id>
     <published>2018-05-29T08:42:03.000Z</published>
-    <updated>2018-05-29T08:44:54.581Z</updated>
+    <updated>2018-05-29T08:44:56.000Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i))) &#123;</span><br><span class="line">  //跳到手机端</span><br><span class="line">&#125; else &#123;</span><br><span class="line">     //跳到电脑端</span><br><span class="line">     window.location = &quot;../pc/index.html&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -157,7 +179,7 @@
     <link href="http://yoursite.com/2018/05/25/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E5%8E%8B%E7%BC%A9%E5%B0%BA%E5%AF%B8%EF%BC%8Ccanvas%E6%96%B9%E6%B3%95/"/>
     <id>http://yoursite.com/2018/05/25/微信小程序-图片上传压缩尺寸，canvas方法/</id>
     <published>2018-05-25T08:40:49.000Z</published>
-    <updated>2018-05-29T08:45:19.572Z</updated>
+    <updated>2018-05-29T08:45:20.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>这几天公司一个小程序项目遇到图片上传图片太大，导致用户上传体验不流畅的问题。首先想到的就是需要把上传的照片压缩小，这里使用canvas的方法把图片重绘在一个固定尺寸上上传，分享出来，希望可以帮到遇到同样问题的同学们</p></blockquote><p>wxml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;button bindtap=&apos;selectImage&apos;&gt;select image&lt;/button&gt;</span><br><span class="line">&lt;button bindtap=&apos;saveImage&apos;&gt;save image&lt;/button&gt;</span><br><span class="line">&lt;canvas style=&quot;width: 300px; height: 200px;&quot; canvas-id=&quot;myCanvas&quot;&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure></p><p>js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">// 绘制图片到canvas上</span><br><span class="line">selectImage:function()&#123;</span><br><span class="line">    const ctx = wx.createCanvasContext(&apos;myCanvas&apos;)</span><br><span class="line">    </span><br><span class="line">    wx.chooseImage(&#123;</span><br><span class="line">      success: function(res)&#123;</span><br><span class="line">        ctx.drawImage(res.tempFilePaths[0], 0, 0, 300, 200)</span><br><span class="line">        ctx.draw()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br><span class="line">//保存图片</span><br><span class="line">saveImage:function()&#123;</span><br><span class="line">    const ctx = wx.createCanvasContext(&apos;myCanvas&apos;)</span><br><span class="line">    wx.canvasToTempFilePath(&#123;</span><br><span class="line">      x: 0,</span><br><span class="line">      y: 0,</span><br><span class="line">      width: 300,</span><br><span class="line">      height: 200,</span><br><span class="line">      destWidth: 300,</span><br><span class="line">      destHeight: 200,</span><br><span class="line">      canvasId: &apos;myCanvas&apos;,</span><br><span class="line">      success: function(res) &#123;</span><br><span class="line">        console.log(res.tempFilePath)</span><br><span class="line">        wx.previewImage(&#123;</span><br><span class="line">            urls: [res.tempFilePath],</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125; </span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
