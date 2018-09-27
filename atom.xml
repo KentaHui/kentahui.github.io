@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-22T15:00:37.977Z</updated>
+  <updated>2018-09-27T09:54:01.824Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Vue]-页面之间传递参数</title>
+    <link href="http://yoursite.com/2018/09/27/Vue-%E9%A1%B5%E9%9D%A2%E4%B9%8B%E9%97%B4%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0/"/>
+    <id>http://yoursite.com/2018/09/27/Vue-页面之间传递参数/</id>
+    <published>2018-09-27T09:50:28.000Z</published>
+    <updated>2018-09-27T09:54:01.824Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>同级传参的两种方式<br>1.query穿参，或者params传参<br>使用 this.$router.push({path: ‘/‘, query: {参数名: ‘参数值’})<br>this.$router.push({name: ‘/‘, params: {参数名: ‘参数值’})</p></blockquote><p>在A列表跳转页//点击事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">goToSDetails:<span class="function"><span class="keyword">function</span> (<span class="params">id</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.$router.push(&#123;</span><br><span class="line">    path:<span class="string">'./release'</span>,</span><br><span class="line">    query:&#123;</span><br><span class="line">      nameId:<span class="keyword">this</span>.list[id].nameCn&#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p><p>在B详情页<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">created:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.getParams();</span><br><span class="line">&#125;,</span><br><span class="line">watch: &#123;</span><br><span class="line">  <span class="comment">// 监测路由变化,只要变化了就调用获取路由参数方法将数据存储本组件即可</span></span><br><span class="line">  <span class="string">'$route'</span>: <span class="string">'getParams'</span></span><br><span class="line">&#125;,</span><br><span class="line">methods:&#123;</span><br><span class="line">  getParams:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 取到路由带过来的参数</span></span><br><span class="line">    <span class="keyword">var</span> routerParams = <span class="keyword">this</span>.$route.query.nameId</span><br><span class="line">    <span class="comment">// 将数据放在当前组件的数据内</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"传来的参数=="</span>+routerParams)</span><br><span class="line">    <span class="keyword">this</span>.textareText = routerParams</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;同级传参的两种方式&lt;br&gt;1.query穿参，或者params传参&lt;br&gt;使用 this.$router.push({path: ‘/‘, query: {参数名: ‘参数值’})&lt;br&gt;this.$router.push({name: ‘/‘, 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>[如寄]-再一次提起笔</title>
@@ -435,30 +457,6 @@ $(&quot;#&quot;).css(&quot;backgroundImage&quot;).replace(&#39;url(&#39;,&#39;&#
       
       
         &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;br&gt;&lt;pre class=&quot;highlight prettyprint&quot;&gt;&lt;span class=&quot;kwd&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; url &lt;/span&gt;&lt;span class=
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>通过Display:box构建自动响应式多列布局</title>
-    <link href="http://yoursite.com/2018/05/09/%E9%80%9A%E8%BF%87Display-box%E6%9E%84%E5%BB%BA%E8%87%AA%E5%8A%A8%E5%93%8D%E5%BA%94%E5%BC%8F%E5%A4%9A%E5%88%97%E5%B8%83%E5%B1%80/"/>
-    <id>http://yoursite.com/2018/05/09/通过Display-box构建自动响应式多列布局/</id>
-    <published>2018-05-09T03:26:37.000Z</published>
-    <updated>2018-05-09T03:28:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>父节点：</p><pre class="prettyprint"><span class="atv"><span class="pun">display: -webkit-flex; -webkit-flex-flow: row; -webkit-align-items: stretch; -webkit-justify-content: space-between; /*IE10还不支持*/ display: -ms-flex; -ms-flex-flow: row wrap; -ms-align-items: stretch; -ms-justify-content: space-between; display: flex; flex-flow: row; align-items: stretch; justify-content: space-between;</span></span></pre>子节点：<pre class="prettyprint">-webkit-flex: 1; -moz-flex: 1; flex: 1;</pre>切换js：<pre class="prettyprint">$('.service .left ul li').click(function(){ $(this).addClass('active').siblings().removeClass('active'); $('.service .right&gt;section:eq('+$(this).index()+')').fadeIn().siblings("section").hide()})</pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;父节点：&lt;/p&gt;
-&lt;pre class=&quot;prettyprint&quot;&gt;&lt;span class=&quot;atv&quot;&gt;&lt;span class=&quot;pun&quot;&gt;display: -webkit-flex;
- -webkit-flex-flow: row;
- -webkit-align-item
       
     
     </summary>
