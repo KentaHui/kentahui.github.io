@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-27T09:54:01.824Z</updated>
+  <updated>2018-09-30T09:31:34.849Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[小程序]-5个优秀的微信小程序UI组件库</title>
+    <link href="http://yoursite.com/2018/09/30/%E5%B0%8F%E7%A8%8B%E5%BA%8F-5%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8FUI%E7%BB%84%E4%BB%B6%E5%BA%93/"/>
+    <id>http://yoursite.com/2018/09/30/小程序-5个优秀的微信小程序UI组件库/</id>
+    <published>2018-09-30T09:19:04.000Z</published>
+    <updated>2018-09-30T09:31:34.849Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>开发微信小程序的过程中，选择一款好用的组件库，可以达到事半功倍的效果。自从微信小程序面世以来，不断有一些开源组件库出来，下面5款就是排名比较靠前，用户使用量与关注度比较高的小程序UI组件库。还没用到它们的你，可以关注和了解一下哦！</p></blockquote><h1 id="WeUI-WXSS"><a href="#WeUI-WXSS" class="headerlink" title="WeUI WXSS"></a>WeUI WXSS</h1><p>WeUI WXSS是腾讯官方UI组件库WeUI的小程序版，提供了跟微信界面风格一致的用户体验。<br><img src="https://upload-images.jianshu.io/upload_images/3407939-f393b7c444a5e092.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/554/format/webp" alt="image"></p><p>GitHub地址：<a href="https://note.youdao.com/" target="_blank" rel="noopener">https://github.com/Tencent/weui-wxss</a></p><p>npm下载：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i weui-wxss</span><br></pre></td></tr></table></figure></p><h1 id="iView-WeApp"><a href="#iView-WeApp" class="headerlink" title="iView WeApp"></a>iView WeApp</h1><p>iView是TalkingData发布的一款高质量的基于Vue.js组件库，而iView weapp则是它们的小程序版本。<br><img src="https://upload-images.jianshu.io/upload_images/3407939-d1cb49e851d1fccc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/550/format/webp" alt="image"></p><p>GitHub地址：<a href="https://note.youdao.com/" target="_blank" rel="noopener">https://github.com/TalkingData/iview-weapp</a></p><p>npm下载：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i iview-weapp</span><br></pre></td></tr></table></figure></p><h1 id="ZanUI-WeApp"><a href="#ZanUI-WeApp" class="headerlink" title="ZanUI WeApp"></a>ZanUI WeApp</h1><p>ZanUI WeApp是有赞移动 Web UI 规范 ZanUI 的小程序实现版本，结合了微信的视觉规范，为用户提供更加统一的使用感受。</p><p>现已包含 badge、btn、card、cell、dialog、icon、label、noticebar、panel、popup、switch、tab、toast、tooltips 等组件或元素。</p><p><img src="https://upload-images.jianshu.io/upload_images/3407939-c83d1b74219192f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/554/format/webp" alt="image"></p><p>GitHub地址：<a href="https://note.youdao.com/" target="_blank" rel="noopener">https://github.com/youzan/zanui-weapp</a></p><p>npm下载：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i zanui-weapp</span><br></pre></td></tr></table></figure></p><p>另外，ZanUI也使用mpvue重写了zanui-weapp，实现了其中所有组件，为使用mpvue的开发者提供了方便。</p><p>GitHub地址：<a href="https://github.com/samwang1027/mpvue-zanui" target="_blank" rel="noopener">https://github.com/samwang1027/mpvue-zanui</a><br>npm下载：npm i mpvue-zanui</p><h1 id="MinUI"><a href="#MinUI" class="headerlink" title="MinUI"></a>MinUI</h1><p>MinUI 是蘑菇街前端开发团队开发的基于微信小程序自定义组件特性开发而成的一套简洁、易用、高效的组件库，适用场景广，覆盖小程序原生框架，各种小程序组件主流框架等，并且提供了专门的命令行工具。<br><img src="https://upload-images.jianshu.io/upload_images/3407939-2ed888e7379365e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/546/format/webp" alt="image"></p><p>GitHub地址：<a href="https://note.youdao.com/" target="_blank" rel="noopener">https://github.com/meili/minui</a></p><h1 id="Wux-WeApp"><a href="#Wux-WeApp" class="headerlink" title="Wux WeApp"></a>Wux WeApp</h1><p>Wux WeApp也是一个非常不错的微信小程序自定义 UI 组件库，组件比较丰富，值得使用。<br><img src="https://upload-images.jianshu.io/upload_images/3407939-40f2fc48022dac0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/560/format/webp" alt="image"><br>GitHub地址：<a href="https://note.youdao.com/" target="_blank" rel="noopener">https://github.com/wux-weapp/wux-weapp</a></p><p>npm下载：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i wux-weapp</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;开发微信小程序的过程中，选择一款好用的组件库，可以达到事半功倍的效果。自从微信小程序面世以来，不断有一些开源组件库出来，下面5款就是排名比较靠前，用户使用量与关注度比较高的小程序UI组件库。还没用到它们的你，可以关注和了解一下哦！&lt;/p&gt;
+&lt;/bl
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>[Vue]-页面之间传递参数</title>
@@ -436,27 +459,6 @@ $(&quot;#&quot;).css(&quot;backgroundImage&quot;).replace(&#39;url(&#39;,&#39;&#
       
         &lt;p&gt;2018年初微信小游戏跳一跳的火爆带热了一批左小程序的热潮，我们在小程序上有一些项目实战经验，也在实现业务逻辑的过程中遇到过一些问题，这里对于遇到的问题进行一个汇总和记录式的填坑，需要沟通的小伙伴可以加微信 &lt;em&gt;xjw005 &lt;/em&gt;沟通&lt;/p&gt;
 &lt;p&gt;&lt;blockq
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Jquery动态获取img src/动态获取html标题</title>
-    <link href="http://yoursite.com/2018/05/09/Jquery%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96img-src-%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96html%E6%A0%87%E9%A2%98/"/>
-    <id>http://yoursite.com/2018/05/09/Jquery动态获取img-src-动态获取html标题/</id>
-    <published>2018-05-09T04:34:04.000Z</published>
-    <updated>2018-05-09T04:34:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="highlighter-rouge"><br><pre class="highlight prettyprint"><span class="kwd">var</span><span class="pln"> url </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">children</span><span class="pun">(</span><span class="str">“img”</span><span class="pun">).</span><span class="pln">attr</span><span class="pun">(</span><span class="str">“src”</span><span class="pun">);</span><span class="pln"><br>$</span><span class="pun">(</span><span class="str">“.da_case”</span><span class="pun">).</span><span class="pln">attr</span><span class="pun">(</span><span class="str">“src”</span><span class="pun">,</span><span class="pln"> url</span><span class="pun">);</span><br><span class="kwd">var</span><span class="pln"> res </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">children</span><span class="pun">(</span><span class="str">“p”</span><span class="pun">).</span><span class="pln">html</span><span class="pun">();</span><span class="com">// 获取当前点击的li的值</span><span class="pln"><br>$</span><span class="pun">(</span><span class="str">“.ct_titt”</span><span class="pun">).</span><span class="pln">html</span><span class="pun">(</span><span class="pln">res</span><span class="pun">);</span> <span class="com">//将获取的值赋值</span></pre><br></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;br&gt;&lt;pre class=&quot;highlight prettyprint&quot;&gt;&lt;span class=&quot;kwd&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;pln&quot;&gt; url &lt;/span&gt;&lt;span class=
       
     
     </summary>
