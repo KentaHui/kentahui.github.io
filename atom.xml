@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-30T09:31:34.849Z</updated>
+  <updated>2018-10-04T03:43:37.261Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[小程序]-制作弯底swiper轮播</title>
+    <link href="http://yoursite.com/2018/10/04/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%88%B6%E4%BD%9C%E5%BC%AF%E5%BA%95swiper%E8%BD%AE%E6%92%AD/"/>
+    <id>http://yoursite.com/2018/10/04/小程序-制作弯底swiper轮播/</id>
+    <published>2018-10-04T03:43:32.000Z</published>
+    <updated>2018-10-04T03:43:37.261Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>制作一个弯底的swiper,如下图：</p></blockquote><p><img src="http://blog-kenta.oss-cn-hangzhou.aliyuncs.com/poster/wanbanner.jpg" alt="image"></p><h2 id="wxml"><a href="#wxml" class="headerlink" title="wxml"></a>wxml</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">swiper</span> <span class="attr">class</span>=<span class="string">'banner'</span> <span class="attr">indicator-dots</span>=<span class="string">"&#123;&#123;indicatorDots&#125;&#125;"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">autoplay</span>=<span class="string">"&#123;&#123;autoplay&#125;&#125;"</span> <span class="attr">interval</span>=<span class="string">"&#123;&#123;interval&#125;&#125;"</span> <span class="attr">duration</span>=<span class="string">"&#123;&#123;duration&#125;&#125;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;imgUrls&#125;&#125;"</span> <span class="attr">wx:key</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;item&#125;&#125;"</span> <span class="attr">class</span>=<span class="string">"slide-image"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">swiper</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'wanbox'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">'wan'</span> <span class="attr">src</span>=<span class="string">'http://wechatpx.oss-cn-beijing.aliyuncs.com/qixing/ceng.png'</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="wxss"><a href="#wxss" class="headerlink" title="wxss"></a>wxss</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.slide-image</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">750</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">345</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.banner</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">750</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">345</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wanbox</span>&#123;<span class="attribute">position</span>: relative;<span class="attribute">z-index</span>: <span class="number">99</span>&#125;</span><br><span class="line"><span class="selector-class">.wan</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">750</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">35</span>rpx;</span><br><span class="line">  <span class="attribute">margin-top</span>: -<span class="number">34</span>rpx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;制作一个弯底的swiper,如下图：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://blog-kenta.oss-cn-hangzhou.aliyuncs.com/poster/wanbanner.jpg&quot; alt=&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>[小程序]-5个优秀的微信小程序UI组件库</title>
@@ -437,28 +461,6 @@
       
         &lt;pre class=&quot;prettyprint&quot;&gt;
 $(&quot;#&quot;).css(&quot;backgroundImage&quot;).replace(&#39;url(&#39;,&#39;&#39;).replace(&#39;)&#39;,&#39;&#39;);&lt;/pre&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[微信小程序]</title>
-    <link href="http://yoursite.com/2018/05/09/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    <id>http://yoursite.com/2018/05/09/微信小程序/</id>
-    <published>2018-05-09T04:36:28.000Z</published>
-    <updated>2018-05-09T04:36:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>2018年初微信小游戏跳一跳的火爆带热了一批左小程序的热潮，我们在小程序上有一些项目实战经验，也在实现业务逻辑的过程中遇到过一些问题，这里对于遇到的问题进行一个汇总和记录式的填坑，需要沟通的小伙伴可以加微信 <em>xjw005 </em>沟通</p><p><blockquote></blockquote></p><p></p><p style="text-align: center;"><strong>图片单张上传</strong></p><br><br>html设置：<p></p><pre class="prettyprint">&lt;button bindtap="upimg" class='jia_img' &gt;上传&lt;/button&gt; &lt;image src=""&gt;&lt;/image&gt;</pre>js设置：<pre class="prettyprint">data{ tempFilePaths:[]; },  upimg: function () {  wx.chooseImage({  success: function (res) {  var data = {  program_id: app.jtappid  }  var tempFilePaths = res.tempFilePaths //图片  wx.uploadFile({  url: 'aaa.cn', //仅为示例，非真实的接口地址  filePath: tempFilePaths[0],  name: 'add_image', //文件对应的参数名字(key)  formData: data, //其它的表单信息  success: function (res) {  }  })  }  })  },</pre><blockquote><p style="text-align: center;"><strong>图片多张上传</strong></p></blockquote>html设置：<pre class="prettyprint">&lt;view class="big-logos"&gt;  &lt;image bindtap="upimg" src='../../../image/s.png'&gt;&lt;/image&gt;  &lt;block wx:for="" wx:key="index"&gt;  &lt;view class='logoinfo'&gt;  &lt;text class='xxx' bindtap='xxx' data-index=''&gt;x&lt;/text&gt;  &lt;image src=''&gt;&lt;/image&gt;  &lt;/view&gt;  &lt;/block&gt; &lt;/view&gt; &lt;button class='top_20 btn' bindtap="upconfirm"&gt;确定&lt;/button&gt;</pre>js设置：<pre class="prettyprint">upconfirm: function () {  this.up(); }, up: function () {  var that = this;  data = {  openid: app.openid,  program_id: app.program_id,  only_num: only_num  }  wx.uploadFile({  url: 'pg.php/Aishen/upload_photo',  filePath: that.data.img_arr[i],  name: 'image', //文件对应的参数名字(key)  formData: data, //其它的表单信息  success: function (res) {  }, complete: function (complete) {  console.log(complete)  i++  if (i == that.data.img_arr.length) {  util.request('https://sz800800.cn/pg.php/Aishen/uploade_photo_r', 'post', { 'only_num': only_num }, '正在加载数据', function (res) {  console.log(res)  if (res.data.state == 1) {  wx.showModal({  title: '提示',  content: '提交成功!',  success: function (res) {  that.onLoad()  wx.navigateBack({  delta: 1  })  }  })  } else {  wx.showModal({  title: '提示',  content: '提交失败,请重新提交!',  })  }  })  } else if (i &lt; that.data.img_arr.length) {//若图片还没有传完，则继续调用函数  that.up()  }  }  }) }, // 上传 upimg: function () {  var that = this;  if (this.data.img_arr.length &lt; 12) {  wx.chooseImage({  sizeType: ['original', 'compressed'],  success: function (res) {  that.setData({  img_arr: that.data.img_arr.concat(res.tempFilePaths)  })  num = that.data.img_arr.length  }  })  } else {  wx.showToast({  title: '最多上传12张图片',  icon: 'loading',  duration: 3000  });  } },</pre><blockquote><p style="text-align: center;">ES6对两个数组的去重操作</p></blockquote><pre class="prettyprint">key =&gt; !arr.includes(key)</pre><blockquote><p style="text-align: center;">改变数组的某一个键值</p></blockquote><pre class="prettyprint">var iset = "markers[" + i + "].alpha"; this.setData({ [iset]: 1 })</pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;2018年初微信小游戏跳一跳的火爆带热了一批左小程序的热潮，我们在小程序上有一些项目实战经验，也在实现业务逻辑的过程中遇到过一些问题，这里对于遇到的问题进行一个汇总和记录式的填坑，需要沟通的小伙伴可以加微信 &lt;em&gt;xjw005 &lt;/em&gt;沟通&lt;/p&gt;
-&lt;p&gt;&lt;blockq
       
     
     </summary>
