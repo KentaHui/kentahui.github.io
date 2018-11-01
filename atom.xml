@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-04T03:43:37.261Z</updated>
+  <updated>2018-11-01T16:09:57.545Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[小程序]-点击toggle数据，点击切换布尔值</title>
+    <link href="http://yoursite.com/2018/11/02/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E7%82%B9%E5%87%BBtoggle%E6%95%B0%E6%8D%AE%EF%BC%8C%E7%82%B9%E5%87%BB%E5%88%87%E6%8D%A2%E5%B8%83%E5%B0%94%E5%80%BC/"/>
+    <id>http://yoursite.com/2018/11/02/小程序-点击toggle数据，点击切换布尔值/</id>
+    <published>2018-11-01T16:09:03.000Z</published>
+    <updated>2018-11-01T16:09:57.545Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="这是一个简单的效果，也比较常用-如下："><a href="#这是一个简单的效果，也比较常用-如下：" class="headerlink" title="这是一个简单的效果，也比较常用, 如下："></a>这是一个简单的效果，也比较常用, 如下：</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">fun: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">var</span> follow = that.data.follow;</span><br><span class="line">    <span class="keyword">if</span> (follow) &#123;</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        follow: <span class="literal">false</span></span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="built_in">console</span>.log(follow)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        follow: <span class="literal">true</span></span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="built_in">console</span>.log(follow)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;这是一个简单的效果，也比较常用-如下：&quot;&gt;&lt;a href=&quot;#这是一个简单的效果，也比较常用-如下：&quot; class=&quot;headerlink&quot; title=&quot;这是一个简单的效果，也比较常用, 如下：&quot;&gt;&lt;/a&gt;这是一个简单的效果，也比较常用, 如下：&lt;/h4&gt;&lt;fi
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[小程序]-购物计算器写法</title>
+    <link href="http://yoursite.com/2018/11/01/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%B4%AD%E7%89%A9%E8%AE%A1%E7%AE%97%E5%99%A8%E5%86%99%E6%B3%95/"/>
+    <id>http://yoursite.com/2018/11/01/小程序-购物计算器写法/</id>
+    <published>2018-11-01T15:49:59.000Z</published>
+    <updated>2018-11-01T16:03:59.289Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>制作一个购物车计算器,如下图：</p></blockquote><p><img src="http://blog-kenta.oss-cn-hangzhou.aliyuncs.com/poster/suan.jpg" alt="image"></p><h4 id="html部分"><a href="#html部分" class="headerlink" title="html部分"></a>html部分</h4><blockquote><p><strong><em>在使用过程中html部分需要在元素中定义好索要操作的数据使用data-方式锁定，这里需要注意</em></strong></p></blockquote><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'k-suan '</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'k-label'</span>&gt;</span>班级数量<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'suanbox'</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'addon'</span> <span class="attr">data-name</span>=<span class="string">'classNum'</span> <span class="attr">bindtap</span>=<span class="string">'bindPlus'</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'cuton'</span> <span class="attr">data-name</span>=<span class="string">'classNum'</span> <span class="attr">bindtap</span>=<span class="string">'bindMinus'</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">bindinput</span>=<span class="string">'bindManual'</span> <span class="attr">data-name</span>=<span class="string">"classNum"</span>  <span class="attr">name</span>=<span class="string">"classNum"</span><span class="attr">value</span>=<span class="string">'&#123;&#123;schoolInfo.message.classNum&#125;&#125;'</span>&gt;</span><span class="tag">&lt;/<span class="name">input</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="wxss部分"><a href="#wxss部分" class="headerlink" title="wxss部分"></a>wxss部分</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 计算器start */</span></span><br><span class="line"><span class="selector-class">.k-suan</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">80</span>rpx;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1</span>rpx solid <span class="number">#eee</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">80</span>rpx;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.k-suan</span> <span class="selector-class">.k-label</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">450</span>rpx;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">30</span>rpx;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">5</span>rpx;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">28</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.k-suan</span> <span class="selector-class">.suanbox</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">231</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">58</span>rpx;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(http://wechatpx.oss-cn-beijing.aliyuncs.com/suan.png);</span><br><span class="line">  <span class="attribute">background-size</span>: <span class="number">231</span>rpx <span class="number">58</span>rpx;</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">30</span>rpx;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">12</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.k-suan</span> <span class="selector-class">.suanbox</span> <span class="selector-class">.addon</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">72</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">58</span>rpx;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.k-suan</span> <span class="selector-class">.suanbox</span> <span class="selector-class">.cuton</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">72</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">58</span>rpx;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.k-suan</span> <span class="selector-class">.suanbox</span> <span class="selector-tag">input</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">90</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">58</span>rpx;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">right</span>:<span class="number">72</span>rpx;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 计算器end */</span></span><br></pre></td></tr></table></figure><h4 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 计算器start</span></span><br><span class="line">onsuanadd: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> now = e.currentTarget.dataset.suan</span><br><span class="line">    <span class="keyword">var</span> name = e.currentTarget.dataset.name</span><br><span class="line">    now++</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      [name]: now</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br><span class="line">onsuancut: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> now = e.currentTarget.dataset.suan</span><br><span class="line">    <span class="keyword">var</span> name = e.currentTarget.dataset.name</span><br><span class="line">    <span class="keyword">if</span> (now &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      now--</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      [name]: now</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// 计算器end</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;制作一个购物车计算器,如下图：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;http://blog-kenta.oss-cn-hangzhou.aliyuncs.com/poster/suan.jpg&quot; alt=&quot;image&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>[小程序]-制作弯底swiper轮播</title>
@@ -415,52 +460,6 @@
       
         &lt;p&gt;Dragula是一款支持移动触摸屏设备的纯js元素拖放插件。这个元素拖放插件使用简单，浏览器兼容性好，能够实现通过鼠标或在移动设备中通过手指来拖动DOM元素的位置。它的特点有：&lt;/p&gt;
 &lt;ul&gt;&lt;br&gt;     &lt;li&gt;设置非常简单&lt;/li&gt;&lt;br&gt;     &lt;li&gt;没有外
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>H5中插入音乐，点击控制播放</title>
-    <link href="http://yoursite.com/2018/05/09/H5%E4%B8%AD%E6%8F%92%E5%85%A5%E9%9F%B3%E4%B9%90%EF%BC%8C%E7%82%B9%E5%87%BB%E6%8E%A7%E5%88%B6%E6%92%AD%E6%94%BE/"/>
-    <id>http://yoursite.com/2018/05/09/H5中插入音乐，点击控制播放/</id>
-    <published>2018-05-09T04:41:58.000Z</published>
-    <updated>2018-05-09T04:42:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>html设置：</p><pre class="prettyprint">&lt;link rel="prefetch" href="demo.mp3"&gt;&lt;audio id="Jaudio" class="media-audio" src="demo.mp3" preload loop="loop"&gt;&lt;/audio &gt;&lt;div id="audioPlay" class="animated"&gt;&lt;/div&gt;</pre>js设置：<pre class="prettyprint">function audioAutoPlay(id) { var audio = document.getElementById(id); audio.play(); document.addEventListener("WeixinJSBridgeReady", function() { audio.play(); }, false);};function audioAutoStop(id) { var audio = document.getElementById(id); audio.pause(); document.addEventListener("WeixinJSBridgeReady", function() { audio.pause(); }, false);};audioAutoPlay('Jaudio');$("#audioPlay").on('click', function() { var audioPlayer = document.querySelector('audio#Jaudio'); if (audioPlayer.paused) { audioAutoPlay('Jaudio'); $("#audioPlay").css("animation-play-state", "running") } else { audioAutoStop('Jaudio'); $("#audioPlay").css("animation-play-state", "paused") }})</pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;html设置：&lt;/p&gt;
-&lt;pre class=&quot;prettyprint&quot;&gt;&amp;lt;link rel=&quot;prefetch&quot; href=&quot;demo.mp3&quot;&amp;gt;
-
-&amp;lt;audio id=&quot;Jaudio&quot; class=&quot;media-audio&quot; src=&quot;demo.mp3
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>jquery 获取元素背景图片backgroungImage的url</title>
-    <link href="http://yoursite.com/2018/05/09/jquery-%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87backgroungImage%E7%9A%84url/"/>
-    <id>http://yoursite.com/2018/05/09/jquery-获取元素背景图片backgroungImage的url/</id>
-    <published>2018-05-09T04:37:46.000Z</published>
-    <updated>2018-05-09T04:39:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<pre class="prettyprint">$("#").css("backgroundImage").replace('url(','').replace(')','');</pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;pre class=&quot;prettyprint&quot;&gt;
-$(&quot;#&quot;).css(&quot;backgroundImage&quot;).replace(&#39;url(&#39;,&#39;&#39;).replace(&#39;)&#39;,&#39;&#39;);&lt;/pre&gt;
       
     
     </summary>
