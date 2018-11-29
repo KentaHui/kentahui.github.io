@@ -106,17 +106,19 @@
 
 
 
-  <meta name="description" content="同级传参的两种方式1.query穿参，或者params传参使用 this.$router.push({path: ‘/‘, query: {参数名: ‘参数值’})this.$router.push({name: ‘/‘, params: {参数名: ‘参数值’})  在A列表跳转页//点击事件1234567goToSDetails:function (id) &amp;#123;  this.$rou">
+  <meta name="description" content="版权声明：阳仔原创，转载请注明出处。    https://blog.csdn.net/honey199396/article/details/80091623  前端一定离不开一个东西，动画，无论是游戏还是app还是网页，都一定有动画效果，微信小游戏，小程序也有动画效果，这里有三种办法实现小程序的动画效果。  每帧setData()123456789101112onReady: functio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Vue]-页面之间传递参数">
-<meta property="og:url" content="http://yoursite.com/2018/09/27/Vue-页面之间传递参数/index.html">
+<meta property="og:title" content="[小程序]--在项目中实现动画的三种方式">
+<meta property="og:url" content="http://yoursite.com/2018/11/29/小程序-在项目中实现动画的三种方式/index.html">
 <meta property="og:site_name" content="Kenta&#39;s blog">
-<meta property="og:description" content="同级传参的两种方式1.query穿参，或者params传参使用 this.$router.push({path: ‘/‘, query: {参数名: ‘参数值’})this.$router.push({name: ‘/‘, params: {参数名: ‘参数值’})  在A列表跳转页//点击事件1234567goToSDetails:function (id) &amp;#123;  this.$rou">
+<meta property="og:description" content="版权声明：阳仔原创，转载请注明出处。    https://blog.csdn.net/honey199396/article/details/80091623  前端一定离不开一个东西，动画，无论是游戏还是app还是网页，都一定有动画效果，微信小游戏，小程序也有动画效果，这里有三种办法实现小程序的动画效果。  每帧setData()123456789101112onReady: functio">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-27T09:54:01.824Z">
+<meta property="og:image" content="https://img-blog.csdn.net/20180426111833246?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hvbmV5MTk5Mzk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:updated_time" content="2018-11-29T02:39:07.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[Vue]-页面之间传递参数">
-<meta name="twitter:description" content="同级传参的两种方式1.query穿参，或者params传参使用 this.$router.push({path: ‘/‘, query: {参数名: ‘参数值’})this.$router.push({name: ‘/‘, params: {参数名: ‘参数值’})  在A列表跳转页//点击事件1234567goToSDetails:function (id) &amp;#123;  this.$rou">
+<meta name="twitter:title" content="[小程序]--在项目中实现动画的三种方式">
+<meta name="twitter:description" content="版权声明：阳仔原创，转载请注明出处。    https://blog.csdn.net/honey199396/article/details/80091623  前端一定离不开一个东西，动画，无论是游戏还是app还是网页，都一定有动画效果，微信小游戏，小程序也有动画效果，这里有三种办法实现小程序的动画效果。  每帧setData()123456789101112onReady: functio">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20180426111833246?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hvbmV5MTk5Mzk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 
 
 
@@ -125,7 +127,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/27/Vue-页面之间传递参数/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/29/小程序-在项目中实现动画的三种方式/"/>
 
 
 
@@ -135,7 +137,7 @@
   };
 </script>
 
-  <title>[Vue]-页面之间传递参数 | Kenta's blog</title>
+  <title>[小程序]--在项目中实现动画的三种方式 | Kenta's blog</title>
   
 
 
@@ -299,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/27/Vue-页面之间传递参数/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/29/小程序-在项目中实现动画的三种方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kenta">
@@ -316,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[Vue]-页面之间传递参数</h1>
+          <h1 class="post-title" itemprop="name headline">[小程序]--在项目中实现动画的三种方式</h1>
         
 
         <div class="post-meta">
@@ -328,7 +330,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-27T17:50:28+08:00">2018-09-27</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-29T10:39:06+08:00">2018-11-29</time>
             
 
             
@@ -366,10 +368,16 @@
 
       
         <blockquote>
-<p>同级传参的两种方式<br>1.query穿参，或者params传参<br>使用 this.$router.push({path: ‘/‘, query: {参数名: ‘参数值’})<br>this.$router.push({name: ‘/‘, params: {参数名: ‘参数值’})</p>
+<p>版权声明：阳仔原创，转载请注明出处。    <a href="https://blog.csdn.net/honey199396/article/details/80091623" target="_blank" rel="noopener">https://blog.csdn.net/honey199396/article/details/80091623</a></p>
 </blockquote>
-<p>在A列表跳转页//点击事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">goToSDetails:<span class="function"><span class="keyword">function</span> (<span class="params">id</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.$router.push(&#123;</span><br><span class="line">    path:<span class="string">'./release'</span>,</span><br><span class="line">    query:&#123;</span><br><span class="line">      nameId:<span class="keyword">this</span>.list[id].nameCn&#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
-<p>在B详情页<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">created:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.getParams();</span><br><span class="line">&#125;,</span><br><span class="line">watch: &#123;</span><br><span class="line">  <span class="comment">// 监测路由变化,只要变化了就调用获取路由参数方法将数据存储本组件即可</span></span><br><span class="line">  <span class="string">'$route'</span>: <span class="string">'getParams'</span></span><br><span class="line">&#125;,</span><br><span class="line">methods:&#123;</span><br><span class="line">  getParams:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 取到路由带过来的参数</span></span><br><span class="line">    <span class="keyword">var</span> routerParams = <span class="keyword">this</span>.$route.query.nameId</span><br><span class="line">    <span class="comment">// 将数据放在当前组件的数据内</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"传来的参数=="</span>+routerParams)</span><br><span class="line">    <span class="keyword">this</span>.textareText = routerParams</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>前端一定离不开一个东西，动画，无论是游戏还是app还是网页，都一定有动画效果，微信小游戏，小程序也有动画效果，这里有三种办法实现小程序的动画效果。</p>
+<p><img src="https://img-blog.csdn.net/20180426111833246?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hvbmV5MTk5Mzk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="image"></p>
+<h3 id="每帧setData"><a href="#每帧setData" class="headerlink" title="每帧setData()"></a>每帧setData()</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">onReady: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">    setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      that.onUpdate();</span><br><span class="line">    &#125;,<span class="number">1000</span>/<span class="number">60</span>);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  onUpdate: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.setData (&#123;</span><br><span class="line">      angle: <span class="keyword">this</span>.data.angle + <span class="number">1</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>data中的angle数据是用来设置上面图片的角度的，所以可以通过这种方法实现旋转效果，首先在启动页面的时候模拟一个update效果，每一帧执行一次。<br>该种方法非常耗费性能，不推荐使用。</p>
+<h3 id="Animation实现旋转效果"><a href="#Animation实现旋转效果" class="headerlink" title="Animation实现旋转效果"></a>Animation实现旋转效果</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">onReady: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> animation = wx.createAnimation(&#123;</span><br><span class="line">      duration: <span class="number">3000</span>,</span><br><span class="line">      timingFunction: <span class="string">"linear"</span>,</span><br><span class="line">    &#125;);  </span><br><span class="line">    <span class="keyword">this</span>.animation = animation;</span><br><span class="line"></span><br><span class="line">    animation.rotate(<span class="number">45</span>).step();</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      animationData: animation.export()</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.interval = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      animation.translate(<span class="number">30</span>).step();</span><br><span class="line">      <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">        animationData: animation.export()</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;.bind(<span class="keyword">this</span>), <span class="number">3000</span>)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<p>Animation不但可以实现旋转，也可以实现放大缩小，移动等动画。<br>该种方法可以使用，但是不推荐，因为我自己在使用的时候总遇到各种问题，显示有问题，旋转有问题等等，可能是我用的方法不对吧。而且通过定时器去做也是挺耗费性能的事情，微信小程序本来就性能低下。</p>
+<h3 id="使用Keyfreams"><a href="#使用Keyfreams" class="headerlink" title="使用Keyfreams"></a>使用Keyfreams</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.question</span> <span class="selector-class">.desc</span> <span class="selector-class">.image-rotate</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">20</span>rpx;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">20</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">280</span>rpx;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">280</span>rpx;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">140</span>rpx;</span><br><span class="line">  <span class="attribute">animation</span>: headRotate <span class="number">6s</span> linear infinite</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 头像旋转效果  */</span></span><br><span class="line">@<span class="keyword">keyframes</span> headRotate&#123;</span><br><span class="line">  0% &#123;<span class="attribute">transform</span>: <span class="built_in">rotate</span>(0deg);&#125;</span><br><span class="line">  50% &#123;<span class="attribute">transform</span>: <span class="built_in">rotate</span>(180deg);&#125;</span><br><span class="line">  100% &#123;<span class="attribute">transform</span>: <span class="built_in">rotate</span>(360deg);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在wxss中通过控制transform组件的属性，来实现旋转效果，我也是采用的这种方式，性能上面提示非常多，而且很简单。<br>css可以实现很多的效果，多看看css对于我们实现前端效果有很大帮助。</p>
 
       
     </div>
@@ -426,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/22/如寄-每当我提起笔/" rel="next" title="[如寄]-再一次提起笔">
-                <i class="fa fa-chevron-left"></i> [如寄]-再一次提起笔
+              <a href="/2018/11/29/小程序-修改数组某一项的值/" rel="next" title="[小程序]-修改数组某一项的值">
+                <i class="fa fa-chevron-left"></i> [小程序]-修改数组某一项的值
               </a>
             
           </div>
@@ -435,10 +443,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/30/小程序-5个优秀的微信小程序UI组件库/" rel="prev" title="[小程序]-5个优秀的微信小程序UI组件库">
-                [小程序]-5个优秀的微信小程序UI组件库 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -492,8 +496,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -549,6 +562,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#每帧setData"><span class="nav-number">1.</span> <span class="nav-text">每帧setData()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Animation实现旋转效果"><span class="nav-number">2.</span> <span class="nav-text">Animation实现旋转效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Keyfreams"><span class="nav-number">3.</span> <span class="nav-text">使用Keyfreams</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

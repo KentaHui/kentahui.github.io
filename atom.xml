@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-23T04:26:44.846Z</updated>
+  <updated>2018-11-29T02:39:07.400Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,76 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[小程序]--在项目中实现动画的三种方式</title>
+    <link href="http://yoursite.com/2018/11/29/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%AE%9E%E7%8E%B0%E5%8A%A8%E7%94%BB%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/"/>
+    <id>http://yoursite.com/2018/11/29/小程序-在项目中实现动画的三种方式/</id>
+    <published>2018-11-29T02:39:06.000Z</published>
+    <updated>2018-11-29T02:39:07.400Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>版权声明：阳仔原创，转载请注明出处。    <a href="https://blog.csdn.net/honey199396/article/details/80091623" target="_blank" rel="noopener">https://blog.csdn.net/honey199396/article/details/80091623</a></p></blockquote><p>前端一定离不开一个东西，动画，无论是游戏还是app还是网页，都一定有动画效果，微信小游戏，小程序也有动画效果，这里有三种办法实现小程序的动画效果。</p><p><img src="https://img-blog.csdn.net/20180426111833246?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hvbmV5MTk5Mzk2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="image"></p><h3 id="每帧setData"><a href="#每帧setData" class="headerlink" title="每帧setData()"></a>每帧setData()</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">onReady: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">    setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      that.onUpdate();</span><br><span class="line">    &#125;,<span class="number">1000</span>/<span class="number">60</span>);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  onUpdate: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.setData (&#123;</span><br><span class="line">      angle: <span class="keyword">this</span>.data.angle + <span class="number">1</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p>data中的angle数据是用来设置上面图片的角度的，所以可以通过这种方法实现旋转效果，首先在启动页面的时候模拟一个update效果，每一帧执行一次。<br>该种方法非常耗费性能，不推荐使用。</p><h3 id="Animation实现旋转效果"><a href="#Animation实现旋转效果" class="headerlink" title="Animation实现旋转效果"></a>Animation实现旋转效果</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">onReady: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> animation = wx.createAnimation(&#123;</span><br><span class="line">      duration: <span class="number">3000</span>,</span><br><span class="line">      timingFunction: <span class="string">"linear"</span>,</span><br><span class="line">    &#125;);  </span><br><span class="line">    <span class="keyword">this</span>.animation = animation;</span><br><span class="line"></span><br><span class="line">    animation.rotate(<span class="number">45</span>).step();</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      animationData: animation.export()</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.interval = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      animation.translate(<span class="number">30</span>).step();</span><br><span class="line">      <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">        animationData: animation.export()</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;.bind(<span class="keyword">this</span>), <span class="number">3000</span>)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure><p>Animation不但可以实现旋转，也可以实现放大缩小，移动等动画。<br>该种方法可以使用，但是不推荐，因为我自己在使用的时候总遇到各种问题，显示有问题，旋转有问题等等，可能是我用的方法不对吧。而且通过定时器去做也是挺耗费性能的事情，微信小程序本来就性能低下。</p><h3 id="使用Keyfreams"><a href="#使用Keyfreams" class="headerlink" title="使用Keyfreams"></a>使用Keyfreams</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.question</span> <span class="selector-class">.desc</span> <span class="selector-class">.image-rotate</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">20</span>rpx;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">20</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">280</span>rpx;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">280</span>rpx;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">140</span>rpx;</span><br><span class="line">  <span class="attribute">animation</span>: headRotate <span class="number">6s</span> linear infinite</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 头像旋转效果  */</span></span><br><span class="line">@<span class="keyword">keyframes</span> headRotate&#123;</span><br><span class="line">  0% &#123;<span class="attribute">transform</span>: <span class="built_in">rotate</span>(0deg);&#125;</span><br><span class="line">  50% &#123;<span class="attribute">transform</span>: <span class="built_in">rotate</span>(180deg);&#125;</span><br><span class="line">  100% &#123;<span class="attribute">transform</span>: <span class="built_in">rotate</span>(360deg);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在wxss中通过控制transform组件的属性，来实现旋转效果，我也是采用的这种方式，性能上面提示非常多，而且很简单。<br>css可以实现很多的效果，多看看css对于我们实现前端效果有很大帮助。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;版权声明：阳仔原创，转载请注明出处。    &lt;a href=&quot;https://blog.csdn.net/honey199396/article/details/80091623&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ht
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[小程序]-修改数组某一项的值</title>
+    <link href="http://yoursite.com/2018/11/29/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%BF%AE%E6%94%B9%E6%95%B0%E7%BB%84%E6%9F%90%E4%B8%80%E9%A1%B9%E7%9A%84%E5%80%BC/"/>
+    <id>http://yoursite.com/2018/11/29/小程序-修改数组某一项的值/</id>
+    <published>2018-11-29T02:30:11.000Z</published>
+    <updated>2018-11-29T02:30:12.338Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>对于data数据的操作是小程序乃至Vue、Angular、React最核心的部分，对于数组中某一项的值重新赋值，方法如下：</p></blockquote><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">onopen:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">var</span> i = e.currentTarget.dataset.index</span><br><span class="line">    <span class="keyword">var</span> ifopen = that.data.info[<span class="number">0</span>].list[i].open</span><br><span class="line">    <span class="keyword">var</span> open = <span class="string">"info[0].list["</span>+i+<span class="string">"].open"</span></span><br><span class="line">    <span class="keyword">if</span>(ifopen)&#123;</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        [open]: <span class="literal">false</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        [open]: <span class="literal">true</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;对于data数据的操作是小程序乃至Vue、Angular、React最核心的部分，对于数组中某一项的值重新赋值，方法如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[小程序]-获取页面元素高度</title>
+    <link href="http://yoursite.com/2018/11/29/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%8E%B7%E5%8F%96%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6/"/>
+    <id>http://yoursite.com/2018/11/29/小程序-获取页面元素高度/</id>
+    <published>2018-11-29T02:25:11.000Z</published>
+    <updated>2018-11-29T02:26:04.191Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>在小程序中有时候因为设备尺寸的适配需要，对于页面中某些元素的获取也比较常用，方法如下</p></blockquote><h3 id="js页面"><a href="#js页面" class="headerlink" title="js页面"></a>js页面</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建节点选择器</span></span><br><span class="line">    <span class="keyword">var</span> query = wx.createSelectorQuery();</span><br><span class="line">    <span class="comment">//选择id</span></span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">    query.select(<span class="string">'.every'</span>).boundingClientRect(<span class="function"><span class="keyword">function</span> (<span class="params">rect</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// console.log(rect.width)</span></span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        height: rect.width + <span class="string">'px'</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;).exec();</span><br></pre></td></tr></table></figure><h3 id="wxml页面"><a href="#wxml页面" class="headerlink" title="wxml页面"></a>wxml页面</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'every'</span> <span class="attr">style</span>=<span class="string">'height:&#123;&#123;height&#125;&#125;'</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;在小程序中有时候因为设备尺寸的适配需要，对于页面中某些元素的获取也比较常用，方法如下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;js页面&quot;&gt;&lt;a href=&quot;#js页面&quot; class=&quot;headerlink&quot; title=&quot;js页面&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>[小程序]-实现拖拽列表</title>
@@ -399,70 +469,6 @@
 &lt;p&gt;Ukulele陪伴我已经很长时间了，在午后清风，或是在清晨慵懒惺忪，只要简单弹上一会就会觉得很幸福。在这里把学习方法整理成一个特辑，带给各位同学~&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;https://kenta-plugi
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[小程序]-实现动画效果</title>
-    <link href="http://yoursite.com/2018/06/11/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/"/>
-    <id>http://yoursite.com/2018/06/11/小程序实现动画效果/</id>
-    <published>2018-06-11T10:04:04.000Z</published>
-    <updated>2018-06-13T12:02:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>最近一直在和加拿大客户DominicG合作小程序开发，其间遇到需要实现动效果，其间考虑了@keyframes写法,但是效果和实现复杂程度都相对略高，最后采用双css类变换，通过transtion延时来达到动画效果，无论是体验还是运行都很好，这在里给大家分享出来核心代码，供有需要的同学参考</p></blockquote><p>wxml:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;image class=&apos;upload-btn &#123;&#123;roll?&quot;kroll&quot;:&quot;kroll2&quot;&#125;&#125;&apos; src=&apos;../../dist/images/add.png&apos; bindtap=&apos;tgbtn&apos;&gt;&lt;/image&gt;</span><br></pre></td></tr></table></figure></p><p>wxss:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">.upload-btn1 &#123;</span><br><span class="line">  position: fixed;</span><br><span class="line">  right: 35rpx;</span><br><span class="line">  bottom: 30rpx;</span><br><span class="line">  z-index: 20;</span><br><span class="line">  width: 90rpx;</span><br><span class="line">  height: 90rpx;</span><br><span class="line">  border-radius: 90rpx;</span><br><span class="line">  box-shadow: 0 0 20rpx #807f84;</span><br><span class="line">  opacity: 0;</span><br><span class="line">  transition: 0.3s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.upload-btn12 &#123;</span><br><span class="line">  position: fixed;</span><br><span class="line">  right: 35rpx;</span><br><span class="line">  bottom: 150rpx;</span><br><span class="line">  z-index: 20;</span><br><span class="line">  width: 90rpx;</span><br><span class="line">  height: 90rpx;</span><br><span class="line">  border-radius: 90rpx;</span><br><span class="line">  box-shadow: 0 0 20rpx #807f84;</span><br><span class="line">  opacity: 1;</span><br><span class="line">  transition: 0.3s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;最近一直在和加拿大客户DominicG合作小程序开发，其间遇到需要实现动效果，其间考虑了@keyframes写法,但是效果和实现复杂程度都相对略高，最后采用双css类变换，通过transtion延时来达到动画效果，无论是体验还是运行都很好，这在里给
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[日常用]-Css MediaQuery响应式写法</title>
-    <link href="http://yoursite.com/2018/05/29/%E6%97%A5%E5%B8%B8%E7%94%A8-Css-MediaQuery%E5%93%8D%E5%BA%94%E5%BC%8F%E5%86%99%E6%B3%95/"/>
-    <id>http://yoursite.com/2018/05/29/日常用-Css-MediaQuery响应式写法/</id>
-    <published>2018-05-29T08:46:35.000Z</published>
-    <updated>2018-05-29T08:48:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@media screen and (min-width:640px) &#123;</span><br><span class="line">.code:&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[日常用]-js判断设备类型，响应跳转</title>
-    <link href="http://yoursite.com/2018/05/29/hello-world/"/>
-    <id>http://yoursite.com/2018/05/29/hello-world/</id>
-    <published>2018-05-29T08:42:03.000Z</published>
-    <updated>2018-05-29T08:44:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i))) &#123;</span><br><span class="line">  //跳到手机端</span><br><span class="line">&#125; else &#123;</span><br><span class="line">     //跳到电脑端</span><br><span class="line">     window.location = &quot;../pc/index.html&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
       
     
     </summary>
